@@ -4,7 +4,7 @@ import React from "react";
 
 const HeroComp = ({ imgUrl, altTitle, title, description }: HeroCompType) => {
   return (
-    <div className="relative w-full h-[24rem] md:h-[28rem] lg:h-[30rem] flex items-center justify-center text-white">
+    <div className="relative w-full h-[22rem] md:h-[24rem] lg:h-[26rem] flex items-center justify-center text-white">
       <div className="absolute inset-0 w-full bg-orange-600">
         <Image
           src={imgUrl}

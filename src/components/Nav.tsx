@@ -17,6 +17,8 @@ const navItems = [
       "professional-service",
       "realtime-monitoring",
       "security-services",
+      "soc-services",
+      "who-we-serve",
     ],
   },
   {
@@ -29,7 +31,7 @@ const navItems = [
     ],
   },
   {
-    name: "AISecops",
+    name: "AI",
     links: [
       "ai-security",
       "incident-response",
@@ -99,7 +101,7 @@ const Navbar = () => {
         {/* Logo */}
         <div className="flex items-center space-x-4">
           <Image
-            src="/logoMview.webp"
+            src="https://img1.wsimg.com/isteam/ip/9e261d50-bf0d-4aa5-ada1-a6f6f1c7a1f6/IMG_4762.jpg/:/rs=w:142,h:94,cg:true,m/cr=w:142,h:94/qt=q:95"
             alt="Logo"
             className="h-10 w-auto rounded-md"
             width={64}
