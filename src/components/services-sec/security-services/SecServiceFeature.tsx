@@ -1,5 +1,5 @@
+import KeyFeatureComp from "@/components/common/KeyFeature ";
 import React from "react";
-import KeyFeatureComp from "../common/KeyFeature";
 
 const SecServiceFeature = () => {
   const FeatureSecData = [

@@ -1,4 +1,4 @@
-import ProfessionalServPage from "@/components/professional-services/ProfessionalServPage ";
+import ProfessionalServPage from "@/components/services-sec/professional-services/ProfessionalServPage ";
 import React from "react";
 
 const ProfessionalServiceRoute = () => {

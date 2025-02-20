@@ -24,8 +24,8 @@ const navItems = [
   {
     name: "Solutions",
     links: [
-      "ai-solutions",
-      "network-security",
+      "cloud-security",
+      "data-security",
       "threat-detection",
       "risk-management",
     ],

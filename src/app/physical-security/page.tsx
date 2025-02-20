@@ -1,4 +1,4 @@
-import PhysicalSecurityPage from "@/components/physical-security/PhysicalSecurityPage ";
+import PhysicalSecurityPage from "@/components/services-sec/physical-security/PhysicalSecurityPage ";
 import React from "react";
 
 const PhysicalSecurityRoute = () => {

@@ -1,7 +1,7 @@
+import ConsultButton from "@/components/common/ConsultButton ";
 import { WWSInforType } from "@/types/WWSInfoType ";
 import Image from "next/image";
 import React from "react";
-import ConsultButton from "../common/ConsultButton";
 
 const WWSInfoSec = () => {
   const WWSInfoData: WWSInforType[] = [

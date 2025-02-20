@@ -1,5 +1,5 @@
 export interface FeatureType {
   title: string;
-  para: string;
+  para?: string;
   className?: string;
 }

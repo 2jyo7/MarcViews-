@@ -1,4 +1,4 @@
-import CloudAdoptionPage from "@/components/cloudAdoption/CloudAdoptionPage ";
+import CloudAdoptionPage from "@/components/services-sec/cloudAdoption/CloudAdoptionPage ";
 import React from "react";
 
 const CloudARoutePage = () => {

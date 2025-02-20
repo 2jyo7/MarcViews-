@@ -1,4 +1,4 @@
-import SecurityServMainPage from "@/components/security-services/SecurityServMainPage ";
+import SecurityServMainPage from "@/components/services-sec/security-services/SecurityServMainPage ";
 import React from "react";
 
 const SecurityServiceRoute = () => {

@@ -1,8 +1,7 @@
 import React from "react";
-// import HeroSec from "./HeroSec";
-import ServicePage from "./services/ServicePage";
+import Hero2Sec from "./Home-sec/Hero2Sec";
+import ServicePage from "./Home-sec/services/ServicePage";
 import PartnerSection from "./Partner";
-import Hero2Sec from "./Hero2Sec";
 
 const HomeComp = () => {
   return (

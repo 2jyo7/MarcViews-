@@ -1,4 +1,4 @@
-import MainPageWWS from "@/components/who-we-serve/MainPageWWS ";
+import MainPageWWS from "@/components/services-sec/who-we-serve/MainPageWWS ";
 import React from "react";
 
 const WhoWeServeRoute = () => {

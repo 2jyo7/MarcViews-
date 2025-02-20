@@ -1,5 +1,5 @@
+import HeroComp from "@/components/common/Hero ";
 import React from "react";
-import HeroComp from "../common/Hero";
 
 const WWSHero = () => {
   return (

@@ -1,7 +1,7 @@
+import CardComp from "@/components/common/CardDesign/Card1 ";
 import { RTGalleryType } from "@/types/ProfServImageType ";
 // import Image from "next/image";
 import React from "react";
-import CardComp from "../common/CardDesign/Card1";
 
 const ServSecGallery = () => {
   const ServiceSecurityLs: RTGalleryType[] = [
