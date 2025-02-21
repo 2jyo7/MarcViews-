@@ -26,7 +26,7 @@ const navItems = [
     links: [
       "cloud-security",
       "data-security",
-      "threat-detection",
+      "email-security",
       "risk-management",
     ],
   },

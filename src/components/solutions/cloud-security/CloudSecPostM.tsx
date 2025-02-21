@@ -104,10 +104,10 @@ const CloudSecPostM = () => {
 
         {/* High Fidelity Section */}
         <div className="mb-12 py-8">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4 ">
             🔒 High Fidelity Cloud Security Posture Management
           </h2>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-6 ">
             {HighFidelityData.map((data) => (
               <KeyFeatureComp key={data.id} {...data} />
             ))}
