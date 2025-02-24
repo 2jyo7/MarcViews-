@@ -27,7 +27,8 @@ const navItems = [
       "cloud-security",
       "data-security",
       "email-security",
-      "risk-management",
+      "endpoint-security",
+      "Identity-AccessM",
     ],
   },
   {
