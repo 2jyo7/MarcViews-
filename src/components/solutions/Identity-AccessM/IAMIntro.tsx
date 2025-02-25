@@ -23,7 +23,7 @@ const IAMIntro = () => {
         <div className="lg:w-1/2 text-gray-800 space-y-6 flex flex-col justify-center items-center">
           <h2 className="text-2xl font-bold text-gray-900">Manage and secure digital identities</h2>
           <p className="text-lg leading-relaxed">
-          To ensure compliance with relevant data protection regulations and safeguard the privacy of your customers' & employees' information. 
+          To ensure compliance with relevant data protection regulations and safeguard the privacy of your customers&apos; & employees&apos; information. 
 
 Contact us now to schedule a consultation and take control of your identity and access management needs.
             {/* <span className="font-semibold text-pink-700"> desktops, laptops, smartphones, tablets, and more.</span> */}
