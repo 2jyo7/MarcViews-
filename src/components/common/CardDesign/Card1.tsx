@@ -9,7 +9,7 @@ interface CardCompProps {
 
 const CardComp: React.FC<CardCompProps> = ({ title, imgUrl, para }) => {
   return (
-    <div className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-slate-900 bg-gray-100">
+    <div className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-slate-900 bg-gray-100 ">
       {/* Image (Rendered only if imgUrl exists) */}
       {imgUrl ? (
         <Image
@@ -17,10 +17,10 @@ const CardComp: React.FC<CardCompProps> = ({ title, imgUrl, para }) => {
           alt={title || "Image"}
           width={400}
           height={400}
-          className={`w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105`}
+          className={`w-full max-w-lg h-[450px] object-cover transition-transform duration-500 group-hover:scale-105`}
         />
       ) : (
-        <div className="w-full h-64 bg-gray-300 flex items-center justify-center">
+        <div className="w-full h-[450px] bg-gray-300 flex items-center justify-center">
           <span className="text-gray-600 text-sm">No Image Available</span>
         </div>
       )}

@@ -5,7 +5,7 @@ const LiFeaturesComp = ({
   liPoints,
   className,
 }: {
-  liPoints: string;
+  liPoints: string | string[];
   className?: string;
 }) => {
   return (
