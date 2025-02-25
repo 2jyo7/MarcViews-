@@ -29,6 +29,7 @@ const navItems = [
       "email-security",
       "endpoint-security",
       "Identity-AccessM",
+      "modernization"
     ],
   },
   {
