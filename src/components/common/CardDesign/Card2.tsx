@@ -4,6 +4,7 @@ interface CardComp2Props {
   title?: string;
   imgUrl?: string;
   para?: string;
+  
 }
 
 const CardComp2: React.FC<CardComp2Props> = ({ title, para }) => {

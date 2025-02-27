@@ -26,9 +26,10 @@ const IntroComponent = ({
         </h1>
         <p className="text-gray-600 mt-2 text-center">{description}</p>
       </div>
+      {btnTitle && (
       <button className="px-6 py-2 bg-pink-600 text-white font-semibold rounded-lg shadow-md hover:bg-slate-700 transition">
         {btnTitle}
-      </button>
+      </button> )}
     </div>
   );
 };
