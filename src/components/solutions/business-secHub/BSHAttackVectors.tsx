@@ -1,5 +1,4 @@
 import CardImgT3 from '@/components/common/CardDesign/CardImgT3 ';
-import Image from 'next/image';
 import React from 'react';
 
 const BSHAttackVectors = () => {
