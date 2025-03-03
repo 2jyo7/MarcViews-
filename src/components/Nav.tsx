@@ -37,7 +37,7 @@ const navItems = [
   {
     name: "AI",
     links: [
-      "ai-security",
+      "ai-PoweredBusiness",
       "incident-response",
       "log-monitoring",
       "cloud-compliance",
@@ -175,7 +175,7 @@ const Navbar = () => {
                         href={`/${link}`}
                         className="block px-4 py-2 hover:bg-gray-700"
                       >
-                        {link.replace("-", " ")}
+                        {link.replace("-", " ").toUpperCase()}
                       </Link>
                     </li>
                   ))}

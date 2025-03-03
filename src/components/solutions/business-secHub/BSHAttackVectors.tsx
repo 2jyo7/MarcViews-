@@ -1,3 +1,4 @@
+import CardImgT3 from '@/components/common/CardDesign/CardImgT3 ';
 import Image from 'next/image';
 import React from 'react';
 
@@ -21,12 +22,13 @@ const BSHAttackVectors = () => {
         </h1>
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8'>
           {attackVectorsD.map(avd => (
-            <div key={avd.title} className='bg-fuchsia-200 rounded-xl py-2 px-6 shadow-md shadow-pink-400 overflow-hidden transform transition duration-300 hover:scale-105'>
-              <Image src={avd.imgUrl} alt={avd.title} width={300} height={260} className='w-full h-48  object-cover rounded-full shadow-lg shadow-gray-400' />
-              <div className='p-4 text-gray-800 text-center'>
-                <h3 className='text-lg font-semibold'>{avd.title}</h3>
-              </div>
-            </div>
+            // <div key={avd.title} className='bg-fuchsia-200 rounded-xl py-2 px-6 shadow-md shadow-pink-400 overflow-hidden transform transition duration-300 hover:scale-105'>
+            //   <Image src={avd.imgUrl} alt={avd.title} width={300} height={260} className='w-full h-48  object-cover rounded-full shadow-lg shadow-gray-400' />
+            //   <div className='p-4 text-gray-800 text-center'>
+            //     <h3 className='text-lg font-semibold'>{avd.title}</h3>
+            //   </div>
+            // </div>
+            <CardImgT3 key={avd.title} title={avd.title} imgUrl={avd.imgUrl} className='flex flex-col justify-center items-center' />
           ))}
         </div>
       </div>
