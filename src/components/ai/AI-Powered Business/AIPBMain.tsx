@@ -8,6 +8,10 @@ import AIPrinciple from './AIPrinciple'
 import AICyberSec from './AICyberSec'
 import AIOps from './AIOps'
 import ITOpsM from './ITOpsM'
+import AIHelpKey from './AIHelpKey'
+import AICyberRisk from './AICyberRisk'
+import AImportance from './AImportance'
+import EndppointImgSec from '@/components/solutions/endpoint-security/EndppointImgSec '
 
 const AIPBMain = () => {
   return (
@@ -21,6 +25,10 @@ const AIPBMain = () => {
       <AICyberSec />
       <AIOps />
       <ITOpsM />
+      <AIHelpKey />
+      <AICyberRisk />
+      <AImportance />
+      <EndppointImgSec />
     </div>
   )
 }

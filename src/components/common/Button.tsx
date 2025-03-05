@@ -12,7 +12,7 @@ const Button = ({ label, onClick, className, href }: ButtonProps) => {
   return href ? (
     <Link href={href}>
       <button
-        className={`bg-slate-600 hover:bg-pink-700 text-white font-semibold py-2 px-6 rounded-lg transition duration-300 ${className}`}
+        className={`bg-slate-600 outline-none hover:outline-teal-400 hover:translate-y-1 hover:bg-pink-700 text-white font-semibold py-2 px-6 rounded-lg transition duration-300 ${className}`}
       >
         {label}
       </button>
@@ -20,7 +20,7 @@ const Button = ({ label, onClick, className, href }: ButtonProps) => {
   ) : (
     <button
       onClick={onClick}
-      className={`bg-slate-600 hover:bg-pink-700 text-white font-semibold py-2 px-6 rounded-lg transition duration-300 ${className}`}
+      className={`bg-slate-600 outline-none hover:outline-teal-400 hover:translate-y-1 hover:bg-pink-700 text-white font-semibold py-2 px-6 rounded-lg transition duration-300 ${className}`}
     >
       {label}
     </button>
