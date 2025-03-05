@@ -10,7 +10,7 @@ const AILast3PointsComp = ({title, aiListMapping}: {
       <div className="container mx-auto px-6 md:px-12">
         {/* Section Title */}
         <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-800 dark:text-white mb-8">
-          Importance of AI
+        {title}
         </h2>
 
         {/* Grid Layout */}

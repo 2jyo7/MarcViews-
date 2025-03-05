@@ -39,7 +39,7 @@ const AICyberRisk = () => {
               height={300}
             />
             <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
-              {aicrd.points.map((point, idx) => (
+              {aicrd.points.map((point) => (
                <LiFeaturesComp key={point} liPoints={point} className='border-red-400 bg-white'/>
               ))}
             </ul>
