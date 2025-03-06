@@ -38,7 +38,7 @@ const navItems = [
     name: "AI",
     links: [
       "ai-PoweredBusiness",
-      "incident-response",
+      "ai-UseCases",
       "log-monitoring",
       "cloud-compliance",
     ],
