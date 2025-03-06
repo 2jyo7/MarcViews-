@@ -1,6 +1,5 @@
 "use client"
 import Button from '@/components/common/Button ';
-import LiFeaturesComp from '@/components/common/LiFeaturesComp ';
 import React, { useState } from 'react';
 
 const AIUseCases = () => {
