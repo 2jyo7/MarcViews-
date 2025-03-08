@@ -26,7 +26,7 @@ const MCloudIntro = () => {
     return (
         <section className='py-20 lg:py-24'>
             <div className='container mx-auto px-8 lg:px-12'>
-                <h1 className='text-3xl lg:text-4xl font-bold text-center border-b-2 border-lime-400 pb-4'>Today's Challenges</h1>
+                <h1 className='text-3xl lg:text-4xl font-bold text-center border-b-2 border-lime-400 pb-4'>Today&apos;s Challenges</h1>
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-8 py-12'>
                     {mcIntroD.map(mcID => (
                         <div key={mcID.title} className='p-6 bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-shadow'>
