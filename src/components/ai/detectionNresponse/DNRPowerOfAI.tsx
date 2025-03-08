@@ -40,16 +40,16 @@ const DNRPowerOfAI = () => {
 
         {/* Grid Layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {dnrPowerAI.map((item, index) => (
+          {dnrPowerAI.map((item) => (
             <div
-              key={index}
+              key={item.title}
               className="bg-white rounded-lg shadow-lg p-6 transition-transform duration-300 hover:scale-105"
             >
               <h2 className="text-xl font-semibold text-gray-900 mb-2">
                 {item.title}
               </h2>
-              {item.para.map((text, idx) => (
-                <p key={idx} className="text-gray-700 text-sm leading-relaxed mt-2">
+              {item.para.map((text) => (
+                <p key={text} className="text-gray-700 text-sm leading-relaxed mt-2">
                   {text}
                 </p>
               ))}

@@ -24,13 +24,8 @@ const DNRThreats = () => {
 
         {/* Grid Layout for Threats */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {dnrThreats.map((threat, index) => (
-            // <div
-            //   key={index}
-            //   className="bg-white rounded-lg shadow-md p-4 text-gray-800 font-medium text-lg flex items-center justify-center transition-transform duration-300 hover:scale-105"
-            // >
-            //   {threat}
-            // </div>
+          {dnrThreats.map((threat) => (
+            
             <LiFeaturesComp key={threat} liPoints={threat} className="bg-white border-red-500 py-6 px-6 hover:scale-105"/>
           ))}
         </div>

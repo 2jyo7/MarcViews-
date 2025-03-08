@@ -40,7 +40,7 @@ const navItems = [
       "ai-PoweredBusiness",
       "ai-UseCases",
       "detection-response",
-      "cloud-compliance",
+      "multiCloud-AI-Era",
     ],
   },
   {
