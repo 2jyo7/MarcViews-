@@ -41,6 +41,7 @@ const navItems = [
       "ai-UseCases",
       "detection-response",
       "multiCloud-AI-Era",
+      "protection-prevention"
     ],
   },
   {
