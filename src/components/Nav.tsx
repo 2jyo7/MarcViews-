@@ -41,12 +41,13 @@ const navItems = [
       "ai-UseCases",
       "detection-response",
       "multiCloud-AI-Era",
-      "protection-prevention"
+      "protection-prevention",
+      "roi-with-ai"
     ],
   },
   {
     name: "Company",
-    links: ["about-us", "careers", "partners", "press-releases"],
+    links: ["aboutUs", "careers", "partners", "press-releases"],
   },
   {
     name: "Contact",
