@@ -31,7 +31,7 @@ const navItems = [
       "Identity-AccessM",
       "modernization",
       "secure-networking",
-      "business-secHub"
+      "business-secHub",
     ],
   },
   {
@@ -42,12 +42,12 @@ const navItems = [
       "detection-response",
       "multiCloud-AI-Era",
       "protection-prevention",
-      "roi-with-ai"
+      "roi-with-ai",
     ],
   },
   {
     name: "Company",
-    links: ["aboutUs", "careers", "partners", "press-releases"],
+    links: ["about-Us", "blogs", "careers", "press-releases"],
   },
   {
     name: "Contact",
