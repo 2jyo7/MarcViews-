@@ -46,21 +46,21 @@ const COpenRoles = () => {
   ];
 
   return (
-    <section className="p-10 min-h-screen bg-radial-color">
-      <div className="max-w-5xl container bg-white mx-auto shadow-xl rounded-lg p-10">
-        <h1 className="text-4xl font-semibold text-gray-800 mb-8 text-center">
+    <section className="p-6 sm:p-10 min-h-screen bg-radial-color">
+      <div className="max-w-6xl container bg-white mx-auto shadow-lg rounded-lg px-6 sm:px-10 py-8 sm:py-12">
+        <h1 className="text-3xl sm:text-4xl font-semibold text-gray-800 mb-6 text-center">
           Open Roles
         </h1>
         {openRoles.map((role, index) => (
-          <div key={index} className="mb-10 p-6 ">
-            <h2 className="text-3xl font-semibold text-gray-700">
+          <div key={index} className="mb-8 p-6 border rounded-lg bg-gray-50">
+            <h2 className="text-2xl sm:text-3xl font-semibold text-gray-700">
               {role.title}
             </h2>
-            <p className="text-gray-700 mt-4">
+            <p className="text-gray-700 mt-3">
               <strong className="text-lg">{role.jobDesc}</strong> {role.jobInfo}
             </p>
 
-            <h3 className="text-2xl font-semibold text-gray-700 mt-6">
+            <h3 className="text-xl sm:text-2xl font-semibold text-gray-700 mt-6">
               {role.MainResponse}
             </h3>
             <ul className="list-disc list-inside text-gray-600 mt-3 space-y-2">
@@ -71,7 +71,7 @@ const COpenRoles = () => {
               ))}
             </ul>
 
-            <h3 className="text-2xl font-semibold text-gray-700 mt-6">
+            <h3 className="text-xl sm:text-2xl font-semibold text-gray-700 mt-6">
               {role.ANAReqTitle}
             </h3>
             <p className="text-gray-600 mt-2 font-medium">
@@ -85,11 +85,11 @@ const COpenRoles = () => {
               ))}
             </ul>
 
-            <h3 className="text-2xl font-semibold text-gray-700 mt-6">
+            <h3 className="text-xl sm:text-2xl font-semibold text-gray-700 mt-6">
               {role.ExpInAutomationT}
             </h3>
 
-            <h3 className="text-2xl font-semibold text-gray-700 mt-6">
+            <h3 className="text-xl sm:text-2xl font-semibold text-gray-700 mt-6">
               {role.ExpINAutopoints.title}
             </h3>
             <ul className="list-disc list-inside text-gray-600 mt-3 space-y-2">
@@ -100,7 +100,7 @@ const COpenRoles = () => {
               ))}
             </ul>
 
-            <h3 className="text-2xl font-semibold text-gray-700 mt-6">
+            <h3 className="text-xl sm:text-2xl font-semibold text-gray-700 mt-6">
               {role.InfoForAppT}
             </h3>
             <p className="text-gray-600 mt-3">{role.InfoForApppara}</p>
