@@ -47,7 +47,7 @@ const navItems = [
   },
   {
     name: "Company",
-    links: ["about-Us", "blogs", "careers", "press-releases"],
+    links: ["about-Us", "blogs", "careers", "events"],
   },
   {
     name: "Contact",
@@ -69,7 +69,7 @@ const DropdownMenu = ({
   return (
     <li className="relative">
       <button
-        className="hover:text-pink-300 focus:outline-none"
+        className="hover:text-pink-200 focus:outline-none text-lg"
         onClick={() => toggleDropdown(title)}
         aria-expanded={activeMenu === title}
       >
@@ -77,7 +77,7 @@ const DropdownMenu = ({
       </button>
 
       {activeMenu === title && (
-        <div className="absolute left-1/2 transform -translate-x-1/2 min-w-[200px] bg-white text-gray-900 shadow-lg p-4 rounded-lg z-20">
+        <div className="absolute left-1/2 transform -translate-x-1/2 min-w-[300px] bg-white text-gray-900 shadow-lg p-4 rounded-lg z-20">
           <ul className="space-y-2">
             {links.map((link) => (
               <li key={link}>
@@ -102,7 +102,7 @@ const Navbar = () => {
     setActiveMenu(activeMenu === menu ? null : menu);
 
   return (
-    <nav className="bg-pink-900 text-white fixed top-0 left-0 w-full z-50 shadow-lg">
+    <nav className="bg-pink-900 backdrop-blur-sm text-white fixed top-0 left-0 w-full z-50 shadow-lg">
       <div className="container mx-auto flex items-center justify-between py-4 px-6">
         {/* Logo */}
         <div className="flex items-center space-x-4">
@@ -113,7 +113,7 @@ const Navbar = () => {
             width={64}
             height={92}
           />
-          <Link href="/" className="text-xl font-bold">
+          <Link href="/" className="text-2xl font-semibold">
             MarcViews
           </Link>
         </div>
