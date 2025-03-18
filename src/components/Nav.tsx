@@ -47,11 +47,11 @@ const navItems = [
   },
   {
     name: "Company",
-    links: ["about-Us", "blogs", "careers", "events"],
+    links: ["about-Us", "blogs", "careers", "events", "FAQ", "partners"],
   },
   {
     name: "Contact",
-    links: ["support", "sales", "general-inquiries", "feedback"],
+    links: ["appointment", "sales", "general-inquiries", "feedback"],
   },
 ];
 
