@@ -29,7 +29,7 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section className="py-16 bg-gray-200">
+    <section className="py-16 bg-gradientPattern">
       <div className="container mx-auto px-6 lg:px-12">
         {/* Heading */}
         <h2 className="text-3xl font-bold text-center text-bg-style mb-8">

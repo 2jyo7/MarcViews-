@@ -6,6 +6,10 @@
   @apply bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-pink-600 to-white;
 }
 
+.bg-gradientPattern {
+  @apply bg-gradient-to-br from-white to-blue-400;
+}
+
 .text-bg-style {
   @apply bg-gradient-to-bl from-pink-600 to-black text-transparent bg-clip-text;
 }
