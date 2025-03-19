@@ -29,7 +29,7 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section className="py-16 bg-gradientPattern">
+    <section className="py-16 bg-gray-200">
       <div className="container mx-auto px-6 lg:px-12">
         {/* Heading */}
         <h2 className="text-3xl font-bold text-center text-bg-style mb-8">
@@ -41,7 +41,7 @@ const WhyChooseUs = () => {
           {servicesLists.map((service, index) => (
             <div
               key={index}
-              className="bg-gradient-to-bl from-white to-blue-500 p-6 rounded-2xl shadow-lg shadow-black hover:shadow-lg hover:scale-105 transition-all"
+              className="bg-gradientPattern p-6 rounded-2xl shadow-lg shadow-black hover:shadow-lg hover:scale-105 transition-all"
             >
               <h3 className="text-xl font-semibold text-bg-style mb-2">
                 {service.title}

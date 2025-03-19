@@ -4,7 +4,7 @@ import React from "react";
 
 const LeaderProfile = () => {
   return (
-    <section className="py-24 bg-gray-100">
+    <section className="py-24 bg-gradientPattern">
       <div className="container mx-auto flex items-center gap-8 px-10 py-20 w-full max-w-4xl ">
         <div className="flex flex-col md:flex-row gap-8 justify-center items-center">
           {/* Left Section - Text */}
