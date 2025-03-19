@@ -47,7 +47,15 @@ const navItems = [
   },
   {
     name: "Company",
-    links: ["about-Us", "blogs", "careers", "events", "FAQ", "partners"],
+    links: [
+      "about-Us",
+      "blogs",
+      "careers",
+      "events",
+      "FAQ",
+      "partners",
+      "leadership",
+    ],
   },
   {
     name: "Contact",
