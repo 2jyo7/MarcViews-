@@ -55,6 +55,7 @@ const navItems = [
       "FAQ",
       "partners",
       "leadership",
+      "pay-here",
     ],
   },
   {
