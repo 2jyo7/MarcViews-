@@ -13,3 +13,15 @@
 .text-bg-style {
   @apply bg-gradient-to-bl from-pink-600 to-black text-transparent bg-clip-text;
 }
+
+.heading-style {
+  @apply text-4xl md:text-6xl font-extrabold text-center tracking-wide py-4 md:py-6;
+}
+
+.title-style {
+  @apply text-2xl md:text-3xl font-semibold text-center tracking-wide py-2 md:py-4;
+}
+
+.description-style {
+  @apply text-gray-900/60 text-base md:text-xl font-normal text-center hover:text-gray-600;
+}

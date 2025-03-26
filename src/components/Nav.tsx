@@ -60,7 +60,7 @@ const navItems = [
   },
   {
     name: "Contact",
-    links: ["appointment", "contact-us"],
+    links: ["appointments", "contact-us"],
   },
 ];
 

@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import React from "react";
+import PopUpEffect from "../common/PopUpEffect";
 
 const Hero2Sec = () => {
   const sections = [
@@ -45,53 +46,56 @@ const Hero2Sec = () => {
 
   return (
     <div className="relative w-full min-h-screen bg-opacity-55 my-16 md:mt-10">
-      <div className="relative w-full h-[30vh] md:h-[45vh] lg:h-[55vh]">
-        <Image
-          src="https://images.unsplash.com/photo-1457305237443-44c3d5a30b89?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="Hero Image"
-          fill
-          className="object-cover object-center"
-          priority
-          sizes="50vw"
-        />
-        <div className="absolute inset-0 bg-black/60 flex flex-col justify-center items-center text-center p-4">
-          <h1 className="text-white text-3xl md:text-5xl font-bold">
-            Welcome to MarcViews
-          </h1>
-          <p className="text-white text-sm sm:text-base md:text-lg max-w-md mt-2">
-            Prevent threats and build trust as you grow the business...
-          </p>
-        </div>
-      </div>
-
-      {/* Grid Cards with Hover Effect */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-16 mx-auto px-6 max-w-6xl ">
-        {sections.map((sec) => (
-          <div
-            key={sec.id}
-            className="relative group bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
-          >
-            <Image
-              src={sec.image}
-              alt={sec.title}
-              width={500}
-              height={500}
-              className="w-full h-60 object-cover group-hover:opacity-40 transition-opacity duration-300"
-            />
-            <div className="absolute inset-0 flex flex-col justify-center items-center p-4 opacity-0 group-hover:bg-black/60 group-hover:opacity-100 transition-opacity duration-300">
-              <h2 className="text-white text-lg md:text-xl font-semibold text-center">
-                {sec.title}
-              </h2>
-              <p className="text-white text-sm md:text-base text-center mt-2">
-                {sec.description}
-              </p>
-              <button className="mt-4 px-4 py-2 border border-white rounded-md text-white hover:bg-white hover:text-gray-900 transition-all">
-                Learn More
-              </button>
-            </div>
+      <PopUpEffect>
+        <div className="relative w-full h-[30vh] md:h-[45vh] lg:h-[55vh]">
+          <Image
+            src="https://images.unsplash.com/photo-1457305237443-44c3d5a30b89?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Hero Image"
+            fill
+            className="object-cover object-center"
+            priority
+            sizes="50vw"
+          />
+          <div className="absolute inset-0 bg-black/60 flex flex-col justify-center items-center text-center p-4">
+            <h1 className="text-white text-3xl md:text-5xl font-bold">
+              Welcome to MarcViews
+            </h1>
+            <p className="text-white text-sm sm:text-base md:text-lg max-w-md mt-2">
+              Prevent threats and build trust as you grow the business...
+            </p>
           </div>
-        ))}
-      </div>
+        </div>
+      </PopUpEffect>
+      <PopUpEffect delay={1.2}>
+        {/* Grid Cards with Hover Effect */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-16 mx-auto px-6 max-w-6xl ">
+          {sections.map((sec) => (
+            <div
+              key={sec.id}
+              className="relative group bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
+            >
+              <Image
+                src={sec.image}
+                alt={sec.title}
+                width={500}
+                height={500}
+                className="w-full h-60 object-cover group-hover:opacity-40 transition-opacity duration-300"
+              />
+              <div className="absolute inset-0 flex flex-col justify-center items-center p-4 opacity-0 group-hover:bg-black/60 group-hover:opacity-100 transition-opacity duration-300">
+                <h2 className="text-white text-lg md:text-xl font-semibold text-center">
+                  {sec.title}
+                </h2>
+                <p className="text-white text-sm md:text-base text-center mt-2">
+                  {sec.description}
+                </p>
+                <button className="mt-4 px-4 py-2 border border-white rounded-md text-white hover:bg-white hover:text-gray-900 transition-all">
+                  Learn More
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </PopUpEffect>
     </div>
   );
 };

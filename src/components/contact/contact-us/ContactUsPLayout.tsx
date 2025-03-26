@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
-import Button from "@/components/common/Button ";
 
 interface ContactUsProps {
   title: string;
@@ -20,7 +19,6 @@ interface ContactUsProps {
 
 const ContactUsPLayout: React.FC<ContactUsProps> = ({ title, contacts }) => {
   const [isOpen, setIsOpen] = useState<number | null>(null);
-  const [showForm, setShowForm] = useState(false);
 
   return (
     <section className="py-12 px-4 md:px-8 lg:px-16 bg-gray-300 text-gray-900 rounded-xl">
@@ -61,14 +59,14 @@ const ContactUsPLayout: React.FC<ContactUsProps> = ({ title, contacts }) => {
               )}
             </div>
 
-            {/* Button to Open Contact Form */}
+            {/* Button to Open Gmail */}
             <div className="mt-4 flex gap-2">
-              <Button
-                onClick={() => setShowForm(true)}
-                className="px-4 py-2 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600"
-                label={contact.buttonText}
-              />
-
+              <a
+                href={`mailto:${contact.email}`}
+                className="px-4 py-2 bg-blue-500 text-white rounded-lg shadow-md hover:bg-pink-600"
+              >
+                {contact.buttonText}
+              </a>
               {contact.whatsappLink && (
                 <a
                   href={contact.whatsappLink}
@@ -83,41 +81,6 @@ const ContactUsPLayout: React.FC<ContactUsProps> = ({ title, contacts }) => {
           </div>
         ))}
       </div>
-
-      {/* Contact Form Modal */}
-      {showForm && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="bg-white p-6 rounded-lg shadow-lg max-w-xl">
-            <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
-            <form>
-              <input
-                type="text"
-                placeholder="Your Name"
-                className="w-full p-2 mb-2 border border-gray-300 rounded"
-              />
-              <input
-                type="email"
-                placeholder="Your Email"
-                className="w-full p-2 mb-2 border border-gray-300 rounded"
-              />
-              <textarea
-                placeholder="Your Message"
-                className="w-full p-2 mb-2 border border-gray-300 rounded"
-                rows={4}
-              />
-              <Button
-                className="w-full px-4 py-2 shadow-md "
-                label="Send Message"
-              />
-            </form>
-            <Button
-              onClick={() => setShowForm(false)}
-              className="mt-4 w-full px-4 py-2 "
-              label=" Close"
-            />
-          </div>
-        </div>
-      )}
     </section>
   );
 };

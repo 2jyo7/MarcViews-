@@ -15,9 +15,7 @@ const CyberCHero = () => {
           sizes="50vw"
         />
         <div className="absolute inset-0 bg-black/60 flex justify-center items-center">
-          <h1 className="text-white text-4xl md:text-6xl font-extrabold text-center tracking-wide">
-            Cyber Consulting
-          </h1>
+          <h1 className="heading-style">Cyber Consulting</h1>
         </div>
       </div>
 
