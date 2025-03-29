@@ -1,16 +1,11 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import AppointmentsCard from "./AppointmentsCard";
 
 const AMainPage = () => {
+  const [expandedCard, setExpandedCard] = useState<number | null>(null);
+
   const aCardData = [
-    // {
-    //   title: "Compliance and Regulatory Assessment",
-    //   time: "5 hrs",
-    //   price: "C$999 (pay later)",
-    //   para: "Identifying and evaluating vulnerabilities in systems, networks, and applications to prioritize remediation efforts.& Stakeholder engagement.",
-    //   imgUrl:
-    //     "https://img1.wsimg.com/isteam/ip/9e261d50-bf0d-4aa5-ada1-a6f6f1c7a1f6/IMG_5387-731c8e6.jpg/:/rs=h:%7B640%7D",
-    // },
     {
       title: "Compliance and Regulatory Assessment",
       time: "5 hrs",
@@ -84,16 +79,27 @@ const AMainPage = () => {
         </h1>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {aCardData.map((card) => (
-            <AppointmentsCard
-              key={card.title}
-              title={card.title}
-              time={card.time}
-              price={card.price}
-              para={card.para}
-              imgUrl={card.imgUrl}
-              share=""
-            />
+          {aCardData.map((card, index) => (
+            <div
+              key={index}
+              className={`transition-all duration-300 ${
+                expandedCard !== null && expandedCard !== index
+                  ? "blur-sm opacity-50"
+                  : ""
+              }`}
+            >
+              <AppointmentsCard
+                id={card.title}
+                title={card.title}
+                time={card.time}
+                price={card.price} // No parsedPrice here
+                para={card.para}
+                imgUrl={card.imgUrl}
+                isActive={expandedCard === index}
+                onExpand={() => setExpandedCard(index)}
+                onClose={() => setExpandedCard(null)}
+              />
+            </div>
           ))}
         </div>
       </div>

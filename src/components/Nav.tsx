@@ -146,12 +146,16 @@ const Navbar = () => {
 
             {/* Icons Section */}
             <div className="flex space-x-3 mx-auto">
-              <button className="hidden md:flex items-center justify-center w-10 h-10 border border-white bg-transparent rounded-md hover:bg-white hover:text-pink-900 transition">
-                <IoCart size={32} />
-              </button>
-              <button className="hidden md:flex items-center justify-center w-10 h-10 border border-white bg-slate-600 rounded-md hover:bg-white hover:text-pink-900 transition">
-                <MdAccountBox size={32} />
-              </button>
+              <Link href={"/cart-services"}>
+                <button className="hidden md:flex items-center justify-center w-10 h-10 border border-white bg-transparent rounded-md hover:bg-white hover:text-pink-900 transition">
+                  <IoCart size={32} />
+                </button>
+              </Link>
+              <Link href={"/login-signup"}>
+                <button className="hidden md:flex items-center justify-center w-10 h-10 border border-white bg-slate-600 rounded-md hover:bg-white hover:text-pink-900 transition">
+                  <MdAccountBox size={32} />
+                </button>
+              </Link>
             </div>
           </div>
         </div>
