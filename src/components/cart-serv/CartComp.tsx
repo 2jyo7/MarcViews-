@@ -23,19 +23,21 @@ const Cart = () => {
   }, 0);
 
   return (
-    <section className="py-24">
-      <div className="max-w-lg mx-auto mt-8 p-6 bg-white shadow-lg rounded-lg">
-        <h2 className="text-xl font-bold mb-4">Your Cart</h2>
+    <section className="py-24 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-2xl mx-auto bg-white shadow-lg rounded-lg p-6">
+        <h2 className="text-xl font-bold mb-4 text-center sm:text-left">
+          Your Cart
+        </h2>
 
         {cart.length === 0 ? (
-          <p className="text-gray-500">No appointments added.</p>
+          <p className="text-gray-500 text-center">No appointments added.</p>
         ) : (
           cart.map((appt) => (
             <div
               key={appt.id}
-              className="mb-4 p-4 flex justify-between items-center border rounded-lg"
+              className="mb-4 p-4 flex flex-col sm:flex-row items-center sm:justify-between border rounded-lg"
             >
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-4 w-full sm:w-auto">
                 <Image
                   src={appt.imgUrl}
                   alt={appt.service}
@@ -61,7 +63,8 @@ const Cart = () => {
                   </p>
                 </div>
               </div>
-              <div className="flex items-center gap-2">
+
+              <div className="flex items-center gap-2 mt-3 sm:mt-0">
                 <Button onClick={() => decreaseQuantity(appt.id)} label="-" />
                 <Button onClick={() => increaseQuantity(appt.id)} label="+" />
                 <Button
@@ -74,10 +77,10 @@ const Cart = () => {
         )}
 
         {cart.length > 0 && (
-          <div className="mt-4 sticky bottom-0 bg-white p-4 shadow-md">
+          <div className="mt-4 sticky bottom-0 bg-white p-4 shadow-md text-center sm:text-right">
             <p className="text-lg font-bold">Total: ${totalPrice.toFixed(2)}</p>
             <Button
-              className="w-full mt-2"
+              className="w-full sm:w-auto mt-2"
               onClick={() => alert("Booking Confirmed!")}
               label="Confirm Booking"
             />
