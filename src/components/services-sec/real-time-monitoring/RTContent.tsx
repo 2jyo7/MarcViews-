@@ -3,7 +3,7 @@ import React from "react";
 const RTContent = () => {
   return (
     <section className="bg-gray-100 py-16 px-6 md:px-20">
-      <div className="max-w-4xl mx-auto text-center">
+      <div className="max-w-4xl mx-auto text-center container ">
         {/* Subtitle */}
         <span className="text-pink-700 text-lg font-semibold uppercase tracking-wide">
           Cyber or Physical: We&apos;ve Got You Covered

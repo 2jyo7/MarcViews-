@@ -1,4 +1,6 @@
+"use client";
 import React from "react";
+import { motion } from "framer-motion";
 import {
   FaExchangeAlt,
   FaCog,
@@ -21,11 +23,19 @@ const steps: Step[] = [
   { label: "Manage", icon: <FaSync size={30} />, color: "bg-gray-700" },
 ];
 
+// Duplicate steps to enable infinite scrolling
+const duplicatedSteps = [...steps, ...steps];
+
 const SecServProcessFlow = () => {
   return (
-    <div className="bg-gradient-to-b from-gray-100 to-gray-200 p-10 rounded-lg shadow-lg">
-      <div className="flex flex-wrap justify-center items-center space-x-6 md:space-x-10">
-        {steps.map((step, index) => (
+    <div className="relative w-full overflow-hidden">
+      <motion.div
+        initial={{ x: "0%" }}
+        animate={{ x: "-50%" }} // Moves half, then seamlessly loops
+        transition={{ repeat: Infinity, duration: 15, ease: "linear" }}
+        className="flex m-8 py-8 whitespace-nowrap w-max [mask-image:linear-gradient(to_right,transparent,black,transparent)]"
+      >
+        {duplicatedSteps.map((step, index) => (
           <div key={index} className="flex items-center">
             {/* Step Box */}
             <div
@@ -35,19 +45,16 @@ const SecServProcessFlow = () => {
               <span className="mt-2 font-semibold text-lg">{step.label}</span>
             </div>
 
-            {/* Improved Arrow Connector (Except for Last Step) */}
-            {index < steps.length - 1 && (
-              <div className="relative flex items-center ">
-                {/* Arrow Line */}
+            {/* Arrows Between Steps */}
+            {index < duplicatedSteps.length - 1 && (
+              <div className="flex items-center">
                 <div className="w-16 h-1 bg-gray-500"></div>
-
-                {/* Arrowhead - Styled to Look Smoother */}
                 <div className="w-0 h-0 border-l-[10px] border-l-gray-500 border-t-[5px] border-t-transparent border-b-[5px] border-b-transparent"></div>
               </div>
             )}
           </div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };

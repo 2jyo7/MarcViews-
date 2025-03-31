@@ -2,6 +2,7 @@
 import Image from "next/image";
 import React from "react";
 import PopUpEffect from "../common/PopUpEffect";
+import HeroComp from "../common/Hero";
 
 const Hero2Sec = () => {
   const sections = [
@@ -46,26 +47,13 @@ const Hero2Sec = () => {
 
   return (
     <div className="relative w-full min-h-screen bg-opacity-55 my-16 md:mt-10">
-      <PopUpEffect>
-        <div className="relative w-full h-[30vh] md:h-[45vh] lg:h-[55vh]">
-          <Image
-            src="https://images.unsplash.com/photo-1457305237443-44c3d5a30b89?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="Hero Image"
-            fill
-            className="object-cover object-center"
-            priority
-            sizes="50vw"
-          />
-          <div className="absolute inset-0 bg-black/60 flex flex-col justify-center items-center text-center p-4">
-            <h1 className="text-white text-3xl md:text-5xl font-bold">
-              Welcome to MarcViews
-            </h1>
-            <p className="text-white text-sm sm:text-base md:text-lg max-w-md mt-2">
-              Prevent threats and build trust as you grow the business...
-            </p>
-          </div>
-        </div>
-      </PopUpEffect>
+      <HeroComp
+        title="Welcome to MarcViews"
+        altTitle="home-hero-img"
+        description=" Prevent threats and build trust as you grow the business..."
+        imgUrl="https://images.unsplash.com/photo-1457305237443-44c3d5a30b89?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      />
+
       <PopUpEffect delay={1.2}>
         {/* Grid Cards with Hover Effect */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-16 mx-auto px-6 max-w-6xl ">

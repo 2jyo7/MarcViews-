@@ -1,8 +1,9 @@
+"use client";
 import Button from "@/components/common/Button ";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-
+import { motion } from "framer-motion";
 const CPgallery = () => {
   const cpartnersD = [
     {
@@ -57,6 +58,7 @@ const CPgallery = () => {
     },
   ];
 
+  const duplicatedImages = [...cpartnersD, ...cpartnersD];
   return (
     <section className="py-12 bg-gray-100">
       <div className="container mx-auto px-6 lg:px-10">
@@ -66,26 +68,36 @@ const CPgallery = () => {
         </h1>
         <div className="border-t-2 border-pink-600/60 w-96 mx-auto mb-6"></div>
 
-        {/* Image Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 [mask-image:linear-gradient(to_right,transparent,black,black,transparent)]">
-          {cpartnersD.map((cpI, index) => (
-            <div key={index} className="flex justify-center items-center py-12">
-              <Link href={cpI.hrefUrl} target="_blank">
-                <Image
-                  alt="Company Partner"
-                  src={cpI.imgUrl}
-                  width={200}
-                  height={200}
-                  className="rounded-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out transform hover:scale-105"
-                />
-              </Link>
-            </div>
-          ))}
+        {/* Scrolling Image Grid */}
+        <div className="relative w-full overflow-hidden">
+          <motion.div
+            initial={{ x: "0%" }}
+            animate={{ x: "-50%" }} // Moves left continuously
+            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+            className="flex whitespace-nowrap w-max [mask-image:linear-gradient(to_right,transparent,black,black,transparent)]"
+          >
+            {duplicatedImages.map((cpI, index) => (
+              <div
+                key={index}
+                className="flex justify-center items-center px-6"
+              >
+                <Link href={cpI.hrefUrl} target="_blank">
+                  <Image
+                    alt="Company Partner"
+                    src={cpI.imgUrl}
+                    width={200}
+                    height={200}
+                    className="rounded-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out transform hover:scale-105"
+                  />
+                </Link>
+              </div>
+            ))}
+          </motion.div>
         </div>
 
         {/* Contact Button */}
         <div className="text-center mt-10 bg-white py-4 px-6">
-          <p className="text-xl text-bg-style mb-4 font-semibold">
+          <p className="text-xl text-gray-800 mb-4 font-semibold">
             Speak to a Cybersecurity Expert
           </p>
           <Button
