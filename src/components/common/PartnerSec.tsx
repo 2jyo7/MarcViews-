@@ -60,10 +60,8 @@ const PartnerSec = () => {
     <section className="py-16 bg-gray-50">
       {/* Section Title */}
       <div className="text-center mb-10">
-        <h2 className="text-4xl font-bold text-gray-800">
-          Our Trusted Partners
-        </h2>
-        <p className="text-gray-600 mt-2">
+        <h2 className="heading-style text-bg-style">Our Trusted Partners</h2>
+        <p className="description-style">
           Collaborating with the best in the industry
         </p>
       </div>

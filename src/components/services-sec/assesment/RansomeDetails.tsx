@@ -1,3 +1,4 @@
+import PopUpEffect from "@/components/common/PopUpEffect ";
 import { RansomeDetailsDataTypes } from "@/types/RansomeDetailsTypes ";
 import React from "react";
 
@@ -35,32 +36,34 @@ const RansomeDetails = () => {
 
   return (
     <div className="p-4 md:p-8 lg:p-12 border-gray-500 ">
-      {RansomeDetailsData.map((RDD) => (
-        <div
-          key={RDD.id}
-          className="mb-8 bg-white shadow-lg p-6 rounded-lg border border-gray-200"
-        >
-          {/* Title */}
-          <h1 className="text-2xl lg:text-3xl font-bold mb-6 text-gray-800 flex justify-center">
-            {RDD.title}
-          </h1>
+      <PopUpEffect delay={0.4}>
+        {RansomeDetailsData.map((RDD) => (
+          <div
+            key={RDD.id}
+            className="mb-8 bg-white shadow-lg p-6 rounded-lg border border-gray-200"
+          >
+            {/* Title */}
+            <h1 className="title-style text-bg-style">{RDD.title}</h1>
 
-          {/* Cards */}
-          <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-            {/* Mapping Details */}
-            {RDD.details.map((detail, index) =>
-              Object.values(detail).map((text, idx) => (
-                <div
-                  key={`${index}-${idx}`}
-                  className=" p-4 shadow-lg rounded-lg border border-gray-300"
-                >
-                  <p className="text-gray-700 text-base lg:text-lg">{text}</p>
-                </div>
-              ))
-            )}
+            {/* Cards */}
+            <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+              {/* Mapping Details */}
+              {RDD.details.map((detail, index) =>
+                Object.values(detail).map((text, idx) => (
+                  <div
+                    key={`${index}-${idx}`}
+                    className=" p-4 shadow-lg rounded-lg border border-gray-300"
+                  >
+                    <PopUpEffect>
+                      <p className="description-style py-4">{text}</p>{" "}
+                    </PopUpEffect>
+                  </div>
+                ))
+              )}
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </PopUpEffect>
     </div>
   );
 };

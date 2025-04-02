@@ -1,3 +1,4 @@
+import PopUpEffect from "@/components/common/PopUpEffect ";
 import React from "react";
 import { BiCheckCircle } from "react-icons/bi";
 
@@ -16,7 +17,7 @@ const ProtectionPlanPage = () => {
   return (
     <div className="p-4 md:p-8 lg:p-12 bg-gray-50">
       {/* Main Title */}
-      <h1 className="text-3xl lg:text-4xl font-bold text-center mb-8 text-gray-800">
+      <h1 className="text-bg-style heading-style">
         Protection Plan: How to Build One?
       </h1>
 
@@ -31,8 +32,12 @@ const ProtectionPlanPage = () => {
               <span className="flex items-center justify-center w-10 h-10 text-white bg-pink-800 rounded-full text-lg font-bold">
                 {i + 1}
               </span>
+
               <BiCheckCircle className="text-gray-600 w-6 h-6" />
-              <span className="text-gray-800 font-semibold">{item}</span>
+              <PopUpEffect>
+                {" "}
+                <span className="text-gray-800 font-semibold">{item}</span>{" "}
+              </PopUpEffect>
             </div>
           ))}
         </div>

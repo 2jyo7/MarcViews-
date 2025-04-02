@@ -48,9 +48,7 @@ const ServicesCardCol = () => {
   return (
     <div className="bg-gray-900 p-6">
       {/* Page Title */}
-      <h1 className="text-4xl text-center text-white mb-8">
-        Services Offering
-      </h1>
+      <h1 className="heading-style text-white">Services Offering</h1>
 
       {/* Services Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

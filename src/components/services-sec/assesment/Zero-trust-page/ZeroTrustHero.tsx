@@ -1,3 +1,4 @@
+import PopUpEffect from "@/components/common/PopUpEffect ";
 import Image from "next/image";
 import React from "react";
 
@@ -13,7 +14,7 @@ const ZeroTrustHero = () => {
           className="object-cover"
         />
         <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-          <h1 className="text-white text-3xl md:text-5xl font-bold text-center">
+          <h1 className="heading-style text-white">
             Zero Trust Security Framework
           </h1>
         </div>
@@ -21,7 +22,7 @@ const ZeroTrustHero = () => {
 
       {/* Content Section */}
       <div className="max-w-5xl mx-auto px-6 py-12 md:py-16 lg:py-20 text-gray-800">
-        <p className="text-lg md:text-xl leading-relaxed">
+        <p className="description-style">
           Zero Trust is a powerful framework for securing assets. However, it’s
           implemented differently for every organization, depending on their
           priorities. Whether you’re just starting to identify Zero Trust
@@ -31,21 +32,24 @@ const ZeroTrustHero = () => {
           the next step successfully.
         </p>
 
-        {/* Call-to-Action Section */}
-        <div className="mt-8 bg-white shadow-md p-6 md:p-8 rounded-lg border border-gray-200">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
-            Start Today
-          </h2>
-          <p className="text-lg text-gray-700 mt-2">
-            Zero Trust is not one product or platform; it&apos;s a{" "}
-            <strong className="text-gray-900">security framework</strong> built
-            around the concept of <em>“never trust, always verify”</em> and
-            <em> “assuming breach.”</em>
-          </p>
-          <button className="mt-6 px-6 py-3 bg-pink-600 text-white font-semibold rounded-lg hover:bg-pink-700 transition-all">
-            CONTACT AN EXPERT
-          </button>
-        </div>
+        <PopUpEffect>
+          {/* Call-to-Action Section */}
+          <div className="mt-8 bg-white shadow-md p-6 md:p-8 rounded-lg border border-gray-200">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
+              Start Today
+            </h2>
+            <p className="text-lg text-gray-700 mt-2">
+              Zero Trust is not one product or platform; it&apos;s a{" "}
+              <strong className="text-gray-900">security framework</strong>{" "}
+              built around the concept of <em>“never trust, always verify”</em>{" "}
+              and
+              <em> “assuming breach.”</em>
+            </p>
+            <button className="mt-6 px-6 py-3 bg-pink-600 text-white font-semibold rounded-lg hover:bg-pink-700 transition-all">
+              CONTACT AN EXPERT
+            </button>
+          </div>
+        </PopUpEffect>
       </div>
     </div>
   );

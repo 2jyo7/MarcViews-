@@ -1,4 +1,5 @@
 "use client";
+import PopUpEffect from "@/components/common/PopUpEffect ";
 import React, { useState } from "react";
 import { BiSolidShow } from "react-icons/bi";
 import { GrHide } from "react-icons/gr";
@@ -28,9 +29,9 @@ const Outcomes = () => {
   ];
 
   return (
-    <div className="p-4">
+    <div className="p-8 container mx-auto w-full max-w-6xl ">
       <div className="mb-4 flex justify-center items-center">
-        <h2 className="text-xl font-semibold ">Outcomes</h2>
+        <h2 className="heading-style text-bg-style">Outcomes</h2>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -39,24 +40,28 @@ const Outcomes = () => {
             key={otData.id}
             className="border rounded-lg p-4 shadow-md bg-white hover:shadow-lg transition"
           >
-            <p className="font-medium text-gray-800">{otData.otName}</p>
+            <PopUpEffect>
+              <p className="font-medium text-gray-800">{otData.otName}</p>
 
-            {/* Button to toggle info */}
-            {otData.otInfo && (
-              <>
-                <button
-                  onClick={() => toggleInfo(otData.id)}
-                  className="mt-2 flex items-center gap-1 text-blue-500 underline hover:text-blue-600"
-                >
-                  {visibleInfo[otData.id] ? <GrHide /> : <BiSolidShow />}
-                </button>
+              {/* Button to toggle info */}
+              {otData.otInfo && (
+                <>
+                  <button
+                    onClick={() => toggleInfo(otData.id)}
+                    className="mt-2 flex items-center gap-1 text-blue-500 underline hover:text-blue-600"
+                  >
+                    {visibleInfo[otData.id] ? <GrHide /> : <BiSolidShow />}
+                  </button>
 
-                {/* Conditionally render info */}
-                {visibleInfo[otData.id] && (
-                  <p className="mt-2 text-sm text-gray-600">{otData.otInfo}</p>
-                )}
-              </>
-            )}
+                  {/* Conditionally render info */}
+                  {visibleInfo[otData.id] && (
+                    <p className="mt-2 text-sm text-gray-600">
+                      {otData.otInfo}
+                    </p>
+                  )}
+                </>
+              )}
+            </PopUpEffect>
           </div>
         ))}
       </div>

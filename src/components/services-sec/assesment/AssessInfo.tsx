@@ -19,7 +19,7 @@ const AssessInfo = () => {
 
         {/* Text Section */}
         <div className="w-full md:w-1/2 text-center md:text-left flex flex-col justify-center">
-          <h1 className="text-bg-style title-style">
+          <h1 className="text-bg-style heading-style">
             Welcome to MarcViews Assessments
           </h1>
           <p className="description-style ">

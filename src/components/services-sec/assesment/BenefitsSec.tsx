@@ -1,3 +1,4 @@
+import PopUpEffect from "@/components/common/PopUpEffect ";
 import { BenefitsCardTypes } from "@/types/BenefitsCardType ";
 import React from "react";
 
@@ -78,35 +79,33 @@ const BenefitsSec = () => {
   ];
 
   return (
-    <div className="mx-auto my-3 max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div className="mx-auto my-3 max-w-5xl px-4 sm:px-6 lg:px-8 container">
       <div className="text-center mb-8">
-        <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-          Benefits
-        </h1>
-        <p className="text-gray-600 dark:text-gray-400">
+        <h1 className="heading-style text-bg-style">Benefits</h1>
+        <p className="description-style">
           Explore the key benefits of cybersecurity assessments to safeguard
           your organization.
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {BenefitsCard.map((BCards) => (
-          <div
-            key={BCards.id}
-            className="bg-white dark:bg-gray-800 shadow-md rounded-2xl p-6 border border-gray-200 dark:border-gray-700 transition transform hover:scale-105 hover:shadow-lg"
-          >
-            <h2 className="text-xl font-semibold text-pink-600 dark:text-pink-400 mb-2">
-              {BCards.title}
-            </h2>
-            <p className="text-gray-700 dark:text-gray-300">
-              {BCards.description}
-            </p>
-          </div>
-        ))}
-      </div>
-      <div className="text-center mt-10 my-2 py-2 ">
-        <h1 className="text-2xl font-semibold text-pink-600 dark:text-pink-400 mb-4">
+      <PopUpEffect delay={0.3}>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {BenefitsCard.map((BCards) => (
+            <div
+              key={BCards.id}
+              className="bg-white dark:bg-gray-800 shadow-md rounded-2xl p-6 border border-gray-200 dark:border-gray-700 transition transform hover:scale-105 hover:shadow-lg"
+            >
+              <h2 className="text-bg-style title-style">{BCards.title}</h2>
+              <p className="text-gray-700 dark:text-gray-300">
+                {BCards.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </PopUpEffect>
+      <div className="text-center mt-10 my-2 py-2 p-4">
+        <h2 className="title-style text-bg-style">
           Get Your Assessments Today!
-        </h1>
+        </h2>
         <button className="w-full sm:w-[300px] bg-pink-600 text-white px-6 py-3 rounded-lg font-medium shadow-md hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-pink-400 transition">
           Start Here
         </button>

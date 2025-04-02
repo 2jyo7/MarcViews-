@@ -55,13 +55,13 @@ const AssessCardList = () => {
   ];
 
   return (
-    <div className="bg-gray-900 py-10 px-6">
+    <div className="bg-gray-900 py-10 px-6 container mx-auto w-full m-10">
       <h1 className="text-white text-2xl md:text-4xl font-bold text-center mb-8">
         Explore Our Assessments
       </h1>
-      <div className="flex flex-wrap justify-center gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 py-4 px-6">
         {AssessCardData.map((assessC) => (
-          <div key={assessC.id} className="w-full sm:w-[45%] md:w-[30%]">
+          <div key={assessC.id} className="flex flex-col justify-center">
             <AssessCard
               title={assessC.title}
               btnTitle={assessC.btnTitle}

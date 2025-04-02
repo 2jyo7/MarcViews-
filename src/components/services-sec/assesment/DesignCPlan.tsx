@@ -1,3 +1,4 @@
+import PopUpEffect from "@/components/common/PopUpEffect ";
 import { DCustomPlanType } from "@/types/DCustomPlan ";
 import React from "react";
 
@@ -42,22 +43,24 @@ const DesignCPlan = () => {
   ];
 
   return (
-    <div className="p-6 md:p-10 lg:p-16 bg-gray-50">
-      {/* Title */}
-      <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-8 text-pink-800">
-        Design a Custom Plan for Your Business
-      </h1>
+    <div className="p-6 md:p-10 lg:p-16 bg-gray-50 container mx-auto">
+      <div>
+        {/* Title */}
+        <h1 className="heading-style text-bg-style">
+          Design a Custom Plan for Your Business
+        </h1>
 
-      {/* Responsive Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-        {DesignCustomParas.map((DCitem) => (
-          <div
-            key={DCitem.id}
-            className="bg-gray-800 shadow-md p-4 rounded-lg border border-gray-200 text-white"
-          >
-            {DCitem.para}
-          </div>
-        ))}
+        {/* Responsive Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          {DesignCustomParas.map((DCitem) => (
+            <div
+              key={DCitem.id}
+              className="bg-gray-800 shadow-md p-4 rounded-lg border border-gray-200 text-white"
+            >
+              <PopUpEffect delay={0.3}>{DCitem.para}</PopUpEffect>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
