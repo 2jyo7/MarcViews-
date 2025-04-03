@@ -17,7 +17,7 @@ const ServicesCard = ({ title, img, serviceList, btnTitle }: SrvCardProps) => {
       </div>
 
       {/* Text Content */}
-      <div className="w-full md:w-2/3 p-4 space-y-3">
+      <div className="w-full md:w-2/3 p-4 space-y-3 mx-auto">
         <h2 className="title-style text-bg-style">{title}</h2>
 
         {/* Service List */}

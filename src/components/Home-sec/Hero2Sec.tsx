@@ -54,7 +54,7 @@ const Hero2Sec = () => {
         imgUrl="https://images.unsplash.com/photo-1457305237443-44c3d5a30b89?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
       />
 
-      <PopUpEffect delay={0.6}>
+      <PopUpEffect delay={0.3}>
         {/* Grid Cards with Hover Effect */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-16 mx-auto px-6 max-w-6xl ">
           {sections.map((sec) => (
