@@ -1,3 +1,5 @@
+import Button from "@/components/common/Button ";
+import ZoomingEffect from "@/components/common/ZoomingEffect ";
 import { PublicCloudServTypes } from "@/types/PublicCloudServTypes ";
 import Image from "next/image";
 import React from "react";
@@ -45,69 +47,76 @@ const PublicCloud = () => {
   ];
 
   return (
-    <div className=" py-12 px-4 md:px-10 ">
-      {/* Section Title */}
-      <h1 className="text-center text-3xl font-bold text-white mb-10">
-        Choose Your Preferred Public Cloud
-      </h1>
+    <section className="py-12 px-4 md:px-10">
+      <div className="container mx-auto">
+        {/* Section Title */}
+        <h1 className="text-bg-style heading-style text-center md:text-left">
+          Choose Your Preferred Public Cloud
+        </h1>
 
-      {/* Cloud Logos */}
-      <div className="flex flex-wrap justify-center gap-8 mb-12">
-        {[
-          "https://img1.wsimg.com/isteam/ip/9e261d50-bf0d-4aa5-ada1-a6f6f1c7a1f6/IMG_5571.jpg",
-          "https://img1.wsimg.com/isteam/ip/9e261d50-bf0d-4aa5-ada1-a6f6f1c7a1f6/IMG_5572.jpg",
-          "https://img1.wsimg.com/isteam/ip/9e261d50-bf0d-4aa5-ada1-a6f6f1c7a1f6/IMG-2902.jpg",
-          "https://img1.wsimg.com/isteam/ip/9e261d50-bf0d-4aa5-ada1-a6f6f1c7a1f6/Screenshot_12-11-2024_131725_services.google..jpeg",
-        ].map((src, index) => (
-          <Image
-            key={index}
-            src={src}
-            alt={`Cloud Provider ${index + 1}`}
-            width={120}
-            height={120}
-            className="rounded-lg shadow-md hover:scale-105 transition-transform"
-          />
-        ))}
-      </div>
-
-      {/* Public Cloud Services */}
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 bg-gray-900 p-4 justify-center rounded-lg">
-        {PublicCloudServices.map((PC) => (
-          <div key={PC.id} className="flex flex-col gap-4 ">
-            {/* Image */}
+        {/* Cloud Logos */}
+        <div className="flex flex-wrap justify-center gap-6 sm:gap-10 my-8">
+          {[
+            "https://img1.wsimg.com/isteam/ip/9e261d50-bf0d-4aa5-ada1-a6f6f1c7a1f6/IMG_5571.jpg",
+            "https://img1.wsimg.com/isteam/ip/9e261d50-bf0d-4aa5-ada1-a6f6f1c7a1f6/IMG_5572.jpg",
+            "https://img1.wsimg.com/isteam/ip/9e261d50-bf0d-4aa5-ada1-a6f6f1c7a1f6/IMG-2902.jpg",
+            "https://img1.wsimg.com/isteam/ip/9e261d50-bf0d-4aa5-ada1-a6f6f1c7a1f6/Screenshot_12-11-2024_131725_services.google..jpeg",
+          ].map((src, index) => (
             <Image
-              src={PC.imgUrl}
-              alt={PC.title}
-              width={500}
-              height={200}
-              className="rounded-md shadow-md shadow-white"
+              key={index}
+              src={src}
+              alt={`Cloud Provider ${index + 1}`}
+              width={100}
+              height={100}
+              className="rounded-lg shadow-md object-contain"
             />
+          ))}
+        </div>
 
-            {/* Title */}
-            <h2 className="text-xl font-semibold text-white">{PC.title}</h2>
+        {/* Public Cloud Services */}
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 bg-gray-900 p-6 sm:p-8 rounded-lg">
+          {PublicCloudServices.map((PC) => (
+            <div
+              key={PC.id}
+              className="flex flex-col gap-4 items-center text-center sm:text-left"
+            >
+              {/* Image */}
+              <ZoomingEffect>
+                <Image
+                  src={PC.imgUrl}
+                  alt={PC.title}
+                  width={400}
+                  height={200}
+                  className="rounded-md shadow-md object-cover"
+                />
+              </ZoomingEffect>
 
-            {/* Points List */}
-            <ul className="list-disc list-inside text-white  space-y-2">
-              {PC.points.map((point, i) => (
-                <li key={i} className="pl-2 ">
-                  {point}
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
+              {/* Title */}
+              <h2 className="more-title-style text-white ">{PC.title}</h2>
+
+              {/* Points List */}
+              <ul className="list-none space-y-2 description-white-style">
+                {PC.points.map((point, i) => (
+                  <li key={i} className="flex items-start gap-2">
+                    <span className="text-white text-lg">●</span>
+                    <span className="flex-1">{point}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        {/* Call to Action Buttons */}
+        <div className="mt-12 flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
+          <Button label=" BOOK A POC CALL" className="px-8 py-4" />
+          <Button
+            label=" BOOK AN ASSESSMENT REVIEW SESSION"
+            className="px-8 py-4 bg-neutral-900"
+          />
+        </div>
       </div>
-
-      {/* Call to Action Buttons */}
-      <div className="mt-16 flex flex-col md:flex-row gap-4 md:gap-8 justify-center">
-        <button className="w-full md:w-auto px-8 py-3 text-white bg-pink-700 rounded-lg font-semibold shadow-md hover:bg-pink-800 transition">
-          BOOK A POC CALL
-        </button>
-        <button className="w-full md:w-auto px-8 py-3 text-white bg-blue-700 rounded-lg font-semibold shadow-md hover:bg-blue-800 transition">
-          BOOK AN ASSESSMENT REVIEW SESSION
-        </button>
-      </div>
-    </div>
+    </section>
   );
 };
 

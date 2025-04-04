@@ -1,3 +1,5 @@
+import Button from "@/components/common/Button ";
+import PopUpEffect from "@/components/common/PopUpEffect ";
 import { CloudReviewTypes } from "@/types/CloudReviewTypes ";
 import Image from "next/image";
 import React from "react";
@@ -58,7 +60,7 @@ const CloudReview = () => {
 
         {/* Text Content */}
         <div className="w-full md:w-1/2 bg-white p-8 rounded-lg shadow-lg">
-          <p className="text-gray-700 text-lg leading-relaxed">
+          <p className="description-style">
             Our Well-Architected Review session generates a set of
             recommendations through a guided assessment based on the
             industry&apos;s Well-Architected Framework. We shall examine the
@@ -70,7 +72,7 @@ const CloudReview = () => {
                 key={CRD.id}
                 className="bg-blue-100 px-5 py-3 rounded-md text-center font-semibold text-gray-800"
               >
-                {CRD.name}
+                <PopUpEffect>{CRD.name} </PopUpEffect>
               </li>
             ))}
           </ul>
@@ -84,26 +86,27 @@ const CloudReview = () => {
             key={CRD.id}
             className="bg-white p-6 rounded-lg shadow-md flex flex-col h-full"
           >
-            <h1 className="text-xl font-semibold text-gray-900 mb-4">
-              {CRD.name}
-            </h1>
+            <h1 className="text-bg-style more-title-style">{CRD.name}</h1>
 
             {/* List of Points - Growable Section */}
-            <div className="space-y-3 flex-grow">
+            <div className="space-y-3 flex-grow py-6">
               {CRD.points.map((point, i) => (
                 <div
                   key={i}
                   className="text-gray-700 text-base flex items-center bg-gray-100 p-3 rounded-md"
                 >
-                  <span className="text-pink-600 mr-2 text-lg">›</span> {point}
+                  <span className="text-pink-600 mr-2 text-lg">›</span>
+                  <PopUpEffect> {point}</PopUpEffect>
                 </div>
               ))}
             </div>
 
             {/* Button Always at Bottom */}
-            <button className="w-full bg-gray-700 text-white px-5 py-2 rounded-md text-sm hover:bg-pink-700 transition mt-6">
-              START ASSESSMENT
-            </button>
+
+            <Button
+              label="START ASSESSMENT"
+              className="py-2.5 px-4 w-full md:w-auto uppercase "
+            />
           </div>
         ))}
       </div>

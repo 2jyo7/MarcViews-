@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import React from "react";
+import RainbowTitle from "./common/RainbowTtlEffect";
 
 const links = [
   { href: "/assessment", label: "Assessments" },
@@ -28,15 +29,15 @@ const legalLinks = [
 
 const Footer = () => {
   return (
-    <footer className="bg-pink-800 text-white">
+    <footer className="bg-pink-800 text-white py-12">
       {/* Top Section */}
-      <div className="py-8 container mx-auto px-4">
-        <div className="flex flex-wrap justify-center gap-4 text-sm uppercase tracking-wider">
+      <div className="py-8 container mx-auto px-6">
+        <div className="flex flex-wrap justify-center gap-4 text-sm uppercase tracking-wider ">
           {links.map(({ href, label }) => (
             <Link
               key={label}
               href={href}
-              className="hover:bg-white hover:text-pink-600 transition px-2 py-1 rounded-md"
+              className="hover:bg-white hover:text-pink-600 transition px-2 py-1 rounded-md text-base font-medium"
             >
               {label}
             </Link>
@@ -45,15 +46,18 @@ const Footer = () => {
       </div>
 
       {/* Middle Section */}
-      <div className="py-4 text-center text-sm">
-        <strong>MarcViews Networks : MSSP</strong>
+      <div className="py-4 text-center text-base">
+        <RainbowTitle>
+          {" "}
+          <strong className="title-style">MarcViews Networks : MSSP</strong>
+        </RainbowTitle>
         <br />
         111 Queen St. E, S. Building, Suite 450, Toronto, ON, M5C 1S2
       </div>
 
       {/* Bottom Section */}
       <div className="bg-pink-900 py-4 text-gray-100">
-        <div className="container mx-auto flex flex-col items-center space-y-2 text-sm text-center">
+        <div className="container mx-auto flex flex-col items-center px-6 text-base text-center">
           <div className="flex flex-wrap justify-center gap-4">
             {legalLinks.map(({ href, label }) => (
               <Link key={label} href={href} className="hover:text-white">

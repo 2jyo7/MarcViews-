@@ -1,3 +1,5 @@
+import Button from "@/components/common/Button ";
+import PopUpEffect from "@/components/common/PopUpEffect ";
 import { CloudAssessType } from "@/types/CloudAssessType ";
 import React from "react";
 
@@ -46,7 +48,7 @@ const AssessmentsInfo = () => {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-2xl md:text-3xl font-bold text-center mb-6">
+      <h1 className="heading-style text-bg-style">
         Browse all assessments - Step 1
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -55,25 +57,31 @@ const AssessmentsInfo = () => {
             key={CAAD.id}
             className="p-6 bg-white shadow-md rounded-lg border border-gray-200 flex flex-col h-full"
           >
-            <h2 className="text-xl font-semibold mb-4 dark:text-gray-800">
-              {CAAD.title}
-            </h2>
+            <h2 className="more-title-style text-bg-style">{CAAD.title}</h2>
             <div className="text-gray-700 leading-relaxed flex-grow ">
-              {CAAD.para.map((text, index) =>
-                Array.isArray(text) ? (
-                  <ul key={index} className="list-disc pl-5 space-y-2">
-                    {text.map((item, i) => (
-                      <li key={i}>{item}</li>
-                    ))}
-                  </ul>
-                ) : (
-                  <p key={index}>{text}</p>
-                )
-              )}
+              <PopUpEffect>
+                {CAAD.para.map((text, index) =>
+                  Array.isArray(text) ? (
+                    <ul key={index} className="list-disc pl-5 space-y-2">
+                      {text.map((item, i) => (
+                        <li key={i} className="description-style">
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p className="description-style" key={index}>
+                      {text}
+                    </p>
+                  )
+                )}{" "}
+              </PopUpEffect>
             </div>
-            <button className="mt-4 px-6 py-2 bg-pink-600 text-white font-semibold rounded-md hover:bg-gray-700 transition self-start">
-              {CAAD.btnTitle}
-            </button>
+
+            <Button
+              label={CAAD.btnTitle}
+              className="mt-4 px-6 py-2 bg-pink-600 text-white font-semibold rounded-md hover:bg-gray-700 transition self-start"
+            />
           </div>
         ))}
       </div>
