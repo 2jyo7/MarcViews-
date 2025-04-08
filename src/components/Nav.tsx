@@ -5,8 +5,21 @@ import { RxCrossCircled, RxHamburgerMenu } from "react-icons/rx";
 import Image from "next/image";
 import { IoCart } from "react-icons/io5";
 import { MdAccountBox } from "react-icons/md";
+import RainbowTitle from "./common/RainbowTtlEffect";
 
-const navItems = [
+interface NavItem {
+  name: string;
+  links: string[];
+}
+
+interface DropdownMenuProps {
+  title: string;
+  links: string[];
+  activeMenu: string | null;
+  toggleDropdown: (menu: string) => void;
+}
+
+const navItems: NavItem[] = [
   {
     name: "Services",
     links: [
@@ -69,12 +82,7 @@ const DropdownMenu = ({
   links,
   activeMenu,
   toggleDropdown,
-}: {
-  title: string;
-  links: string[];
-  activeMenu: string | null;
-  toggleDropdown: (menu: string) => void;
-}) => {
+}: DropdownMenuProps) => {
   return (
     <li className="relative">
       <button
@@ -91,7 +99,7 @@ const DropdownMenu = ({
             {links.map((link) => (
               <li key={link}>
                 <Link href={`/${link}`} className="block p-2 hover:bg-gray-200">
-                  {link.replace("-", " ").toUpperCase()}
+                  {link.replace(/-/g, " ").toUpperCase()}
                 </Link>
               </li>
             ))}
@@ -103,7 +111,7 @@ const DropdownMenu = ({
 };
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
 
   const toggleMobileMenu = () => setIsOpen(!isOpen);
@@ -122,8 +130,11 @@ const Navbar = () => {
             width={64}
             height={92}
           />
-          <Link href="/" className="text-2xl font-semibold">
-            MarcViews
+
+          <Link href="/">
+            <RainbowTitle className="text-xl md:text-2xl">
+              MarcViews
+            </RainbowTitle>
           </Link>
         </div>
 
@@ -141,17 +152,15 @@ const Navbar = () => {
             ))}
           </ul>
           <div className="flex items-center space-x-4">
-            {/* Divider */}
             <div className="border-r border-white h-6"></div>
 
-            {/* Icons Section */}
             <div className="flex space-x-3 mx-auto">
-              <Link href={"/cart-services"}>
+              <Link href="/cart-services">
                 <button className="hidden md:flex items-center justify-center w-10 h-10 border border-white bg-transparent rounded-md hover:bg-white hover:text-pink-900 transition">
                   <IoCart size={32} />
                 </button>
               </Link>
-              <Link href={"/login-signup"}>
+              <Link href="/login-signup">
                 <button className="hidden md:flex items-center justify-center w-10 h-10 border border-white bg-slate-600 rounded-md hover:bg-white hover:text-pink-900 transition">
                   <MdAccountBox size={32} />
                 </button>
@@ -190,7 +199,7 @@ const Navbar = () => {
                         href={`/${link}`}
                         className="block px-4 py-2 hover:bg-gray-700"
                       >
-                        {link.replace("-", " ").toUpperCase()}
+                        {link.replace(/-/g, " ").toUpperCase()}
                       </Link>
                     </li>
                   ))}

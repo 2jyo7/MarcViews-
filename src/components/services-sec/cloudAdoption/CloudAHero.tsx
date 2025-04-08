@@ -1,3 +1,4 @@
+import Button from "@/components/common/Button ";
 import PopUpEffect from "@/components/common/PopUpEffect ";
 import Image from "next/image";
 import React from "react";
@@ -87,9 +88,10 @@ const CloudAHero = () => {
 
             {/* CTA Button */}
             <div className="mt-8">
-              <button className="bg-pink-700 text-white px-6 py-3 rounded-lg text-lg font-semibold shadow-lg hover:bg-gray-600 transition duration-300">
-                BOOK AN APPOINTMENT WITH AN EXPERT
-              </button>
+              <Button
+                label="BOOK AN APPOINTMENT WITH AN EXPERT"
+                href="/appointments"
+              />
             </div>
           </div>
         </PopUpEffect>

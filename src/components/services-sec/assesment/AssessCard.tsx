@@ -1,9 +1,10 @@
+import Button from "@/components/common/Button ";
 import WiggleEffect from "@/components/common/WiggleEffect ";
 import { AssessCardTypes } from "@/types/AssessCardTypes ";
 import Image from "next/image";
 import React from "react";
 
-const AssessCard = ({ title, imgUrl, btnTitle }: AssessCardTypes) => {
+const AssessCard = ({ title, imgUrl, btnTitle, href }: AssessCardTypes) => {
   return (
     <WiggleEffect>
       <div className="max-w-xs md:max-w-sm lg:max-w-md mx-auto p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
@@ -20,9 +21,8 @@ const AssessCard = ({ title, imgUrl, btnTitle }: AssessCardTypes) => {
         {/* Card Content */}
         <div className="text-center mt-4">
           <h1 className="text-xl font-bold text-gray-800">{title}</h1>
-          <button className="mt-4 px-6 py-2 bg-pink-600 text-white font-medium rounded-full shadow-md hover:bg-pink-700 hover:scale-105 transition duration-200">
-            {btnTitle}
-          </button>
+
+          <Button label={btnTitle} href={href} />
         </div>
       </div>
     </WiggleEffect>

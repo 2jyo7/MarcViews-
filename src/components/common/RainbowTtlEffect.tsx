@@ -1,8 +1,14 @@
 "use client";
 import { motion } from "framer-motion";
 import React, { ReactNode } from "react";
+import { twMerge } from "tailwind-merge";
 
-const RainbowTitle = ({ children }: { children: ReactNode }) => {
+type RainbowTitleProps = {
+  children: ReactNode;
+  className?: string;
+};
+
+const RainbowTitle = ({ children, className = "" }: RainbowTitleProps) => {
   return (
     <div className="relative inline-block overflow-hidden">
       <motion.div
@@ -14,9 +20,12 @@ const RainbowTitle = ({ children }: { children: ReactNode }) => {
           repeat: Infinity,
           ease: "linear",
         }}
-        className="text-4xl md:text-6xl font-extrabold text-center
-        bg-[length:300%_300%] bg-clip-text text-transparent 
-        drop-shadow-[0_0_8px_rgba(255,255,255,0.6)] rainbow-text"
+        className={twMerge(
+          `font-extrabold text-center 
+           bg-[length:300%_300%] bg-clip-text text-transparent 
+           drop-shadow-[0_0_8px_rgba(255,255,255,0.6)] rainbow-text`,
+          className
+        )}
       >
         {children}
       </motion.div>

@@ -2,6 +2,7 @@ import Button from "@/components/common/Button ";
 import ZoomingEffect from "@/components/common/ZoomingEffect ";
 import { PublicCloudServTypes } from "@/types/PublicCloudServTypes ";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const PublicCloud = () => {
@@ -62,14 +63,15 @@ const PublicCloud = () => {
             "https://img1.wsimg.com/isteam/ip/9e261d50-bf0d-4aa5-ada1-a6f6f1c7a1f6/IMG-2902.jpg",
             "https://img1.wsimg.com/isteam/ip/9e261d50-bf0d-4aa5-ada1-a6f6f1c7a1f6/Screenshot_12-11-2024_131725_services.google..jpeg",
           ].map((src, index) => (
-            <Image
-              key={index}
-              src={src}
-              alt={`Cloud Provider ${index + 1}`}
-              width={100}
-              height={100}
-              className="rounded-lg shadow-md object-contain"
-            />
+            <Link href={"/cloud-security"} key={index}>
+              <Image
+                src={src}
+                alt={`Cloud Provider ${index + 1}`}
+                width={100}
+                height={100}
+                className="rounded-lg shadow-md object-contain"
+              />
+            </Link>
           ))}
         </div>
 
@@ -109,8 +111,13 @@ const PublicCloud = () => {
 
         {/* Call to Action Buttons */}
         <div className="mt-12 flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
-          <Button label=" BOOK A POC CALL" className="px-8 py-4" />
           <Button
+            href="/appointments"
+            label=" BOOK A POC CALL"
+            className="px-8 py-4"
+          />
+          <Button
+            href="/appointments"
             label=" BOOK AN ASSESSMENT REVIEW SESSION"
             className="px-8 py-4 bg-neutral-900"
           />

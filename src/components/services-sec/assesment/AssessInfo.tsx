@@ -4,7 +4,7 @@ import React from "react";
 
 const AssessInfo = () => {
   return (
-    <section className="py-16 md:py-24">
+    <section id="Assess-info" className="py-16 md:py-24">
       <div className="container mx-auto px-6 md:px-12 lg:px-16 flex flex-col md:flex-row items-center gap-8">
         {/* Image Section */}
         <div className="w-full md:w-1/2 flex justify-center">
@@ -30,8 +30,9 @@ const AssessInfo = () => {
           </p>
           <div className="flex justify-center">
             <Button
+              href="#next-section"
               label="Browse All Categories"
-              className="mt-4 py-2 px-4 w-full md:w-48 text-nowrap"
+              className="mt-4 py-3 px-6 w-full"
             />{" "}
           </div>
         </div>

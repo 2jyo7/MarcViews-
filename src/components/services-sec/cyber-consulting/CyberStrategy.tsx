@@ -1,6 +1,6 @@
+import Button from "@/components/common/Button ";
 import { CyberStrategyTypes } from "@/types/CyberStrategyTypes ";
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 
 const CyberStrategy = () => {
@@ -47,6 +47,22 @@ const CyberStrategy = () => {
       imgUrl:
         "https://img1.wsimg.com/isteam/ip/9e261d50-bf0d-4aa5-ada1-a6f6f1c7a1f6/IMG_5279.jpg/:/cr=t:0%25,l:21.93%25,w:56.14%25,h:100%25/rs=w:730,h:730,cg:true",
     },
+    {
+      id: "CSD4",
+      title: "Operational Efficiency",
+      points: [
+        " Improved Security & Compliance",
+        "Increased productivity & efficiency ",
+        "Standardized & unified IT Infrastructure",
+        "Enhanced agility & responsiveness",
+        "Cost optimization",
+        "Expert support",
+      ],
+      btnHref: "/soc-services",
+      btnTitle: "Continue",
+      imgUrl:
+        "https://img1.wsimg.com/isteam/getty/1488521147/:/cr=t:0%25,l:21.88%25,w:56.25%25,h:100%25/rs=w:730,h:730,cg:true",
+    },
   ];
 
   return (
@@ -84,11 +100,7 @@ const CyberStrategy = () => {
               ))}
             </ul>
 
-            <Link href={CSD.btnHref}>
-              <button className="mt-4 px-6 py-2 bg-pink-700 text-white font-medium rounded-full hover:bg-pink-600 transition-shadow shadow-md hover:shadow-lg">
-                {CSD.btnTitle}
-              </button>
-            </Link>
+            <Button href={CSD.btnHref} label={CSD.btnTitle} />
           </div>
         ))}
       </div>

@@ -1,3 +1,4 @@
+import Button from "@/components/common/Button ";
 import HeroComp from "@/components/common/Hero ";
 import Image from "next/image";
 import React from "react";
@@ -38,9 +39,11 @@ const CyberCHero = () => {
                 <li>Enhancing trust</li>
               </ul>
 
-              <button className="mt-2 px-5 py-2 text-white font-semibold bg-pink-600 hover:bg-pink-700 rounded-lg shadow-md transition">
-                LET&apos;S WORK TOGETHER
-              </button>
+              <Button
+                className="mt-3 py-3 px-4"
+                href="/appointments"
+                label="LET'S WORK TOGETHER"
+              />
             </div>
 
             {/* Right Image */}

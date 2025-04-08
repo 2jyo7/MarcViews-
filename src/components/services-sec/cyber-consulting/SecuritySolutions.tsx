@@ -18,7 +18,10 @@ const SecuritySolutions = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center px-6 py-12 bg-gray-400/30">
+    <div
+      id="security-sol"
+      className="flex flex-col items-center px-6 py-12 bg-gray-400/30"
+    >
       {/* Title Section */}
       <h1 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-6 ">
         <span className="bg-gradient-to-r from-gray-700 to-pink-500 text-transparent bg-clip-text dark:text-white">

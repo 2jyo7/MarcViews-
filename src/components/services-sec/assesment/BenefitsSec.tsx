@@ -92,7 +92,7 @@ const BenefitsSec = () => {
           {BenefitsCard.map((BCards) => (
             <div
               key={BCards.id}
-              className="bg-white dark:bg-gray-800 shadow-md rounded-2xl p-6 border border-gray-200 dark:border-gray-700 transition transform hover:scale-105 hover:shadow-lg"
+              className="bg-white shadow-md rounded-2xl p-6 border border-gray-200 dark:border-gray-700 transition transform hover:scale-105 hover:shadow-lg"
             >
               <h2 className="text-bg-style title-style">{BCards.title}</h2>
               <p className="text-gray-700 dark:text-gray-300">

@@ -4,7 +4,10 @@ import React from "react";
 
 const ReadinessSec = () => {
   return (
-    <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10 py-12 bg-slate-900">
+    <div
+      id="ransomware-readiness"
+      className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10 py-12 bg-slate-900"
+    >
       {/* Background Image Section */}
       <div className="relative w-full h-[300px] md:h-[450px] lg:h-[500px] mb-8 rounded-lg overflow-hidden shadow-lg">
         <Image

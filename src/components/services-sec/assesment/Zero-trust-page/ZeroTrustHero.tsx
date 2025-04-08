@@ -4,7 +4,10 @@ import React from "react";
 
 const ZeroTrustHero = () => {
   return (
-    <div className="relative bg-gray-100 min-h-screen flex flex-col">
+    <div
+      id="zero-trust"
+      className="relative bg-gray-100 min-h-screen flex flex-col "
+    >
       {/* Hero Section with Background Image */}
       <div className="relative w-full h-[400px] md:h-[500px]">
         <Image

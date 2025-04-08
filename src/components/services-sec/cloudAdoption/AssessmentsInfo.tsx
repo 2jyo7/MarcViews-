@@ -80,6 +80,7 @@ const AssessmentsInfo = () => {
 
             <Button
               label={CAAD.btnTitle}
+              href="https://01pplwck2j6.typeform.com/to/GcLq3H6V?typeform-source=marcviews.com"
               className="mt-4 px-6 py-2 bg-pink-600 text-white font-semibold rounded-md hover:bg-gray-700 transition self-start"
             />
           </div>

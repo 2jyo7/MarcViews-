@@ -5,23 +5,25 @@ type ButtonProps = {
   label: string;
   onClick?: () => void;
   className?: string;
-  href?: string; // Remove "| '#'" since "#" is already a string
+  href?: string;
 };
 
-const Button = ({ label, onClick, className, href }: ButtonProps) => {
+const Button = ({ label, onClick, className = "", href }: ButtonProps) => {
+  const baseClasses = `bg-slate-700 text-white font-semibold py-2 px-6 rounded-lg 
+    transition-all duration-200 ease-in-out
+    hover:bg-pink-800 active:scale-95 hover:outline-blue-700 hover:translate-y-2
+    outline-none focus:ring-2 focus:ring-pink-400`;
+
+  const finalClass = `${baseClasses} ${className}`;
+
   return href ? (
     <Link href={href}>
-      <button
-        className={`bg-slate-600 outline-none hover:outline-teal-400 hover:translate-y-1 hover:bg-pink-700 text-white font-semibold py-2 px-6 rounded-lg transition duration-300 ${className}`}
-      >
+      <button className={finalClass} onClick={onClick}>
         {label}
       </button>
     </Link>
   ) : (
-    <button
-      onClick={onClick}
-      className={`bg-slate-600 outline-none hover:outline-teal-400 hover:translate-y-1 hover:bg-pink-700 text-white font-semibold py-2 px-6 rounded-lg transition duration-300 ${className}`}
-    >
+    <button className={finalClass} onClick={onClick}>
       {label}
     </button>
   );

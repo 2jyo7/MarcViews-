@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import TechSupportPartner from "./TechSupportPartner";
-import Link from "next/link";
+import Button from "@/components/common/Button ";
 
 const TechnicalSupport = () => {
   return (
@@ -73,11 +73,7 @@ const TechnicalSupport = () => {
 
       {/* Call to Action Button */}
       <div className="mt-10">
-        <Link href="/">
-          <button className="w-full bg-pink-600 text-white px-6 py-3 rounded-lg shadow-md text-lg font-semibold hover:bg-pink-700 transition duration-300">
-            REQUEST A CONSULTATION CALL
-          </button>
-        </Link>
+        <Button href="/contact-us" label="REQUEST A CONSULTATION CALL" />
       </div>
     </div>
   );
