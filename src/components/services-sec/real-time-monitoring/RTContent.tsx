@@ -1,3 +1,4 @@
+import Button from "@/components/common/Button ";
 import React from "react";
 
 const RTContent = () => {
@@ -5,17 +6,17 @@ const RTContent = () => {
     <section className="bg-gray-100 py-16 px-6 md:px-20">
       <div className="max-w-4xl mx-auto text-center container ">
         {/* Subtitle */}
-        <span className="text-pink-700 text-lg font-semibold uppercase tracking-wide">
+        <span className="title-style">
           Cyber or Physical: We&apos;ve Got You Covered
         </span>
 
         {/* Title */}
-        <h1 className="text-4xl font-extrabold text-gray-900 mt-4">
+        <h2 className="heading-style  text-bg-style">
           A Comprehensive Suite of Real-Time Monitoring Services!
-        </h1>
+        </h2>
 
         {/* Description */}
-        <p className="text-gray-700 text-lg mt-6 leading-relaxed">
+        <p className="description-style">
           Optimize your network performance, enhance security, and ensure
           business continuity.
         </p>
@@ -38,9 +39,11 @@ const RTContent = () => {
 
         {/* CTA Button */}
         <div className="mt-8">
-          <button className="bg-pink-700 hover:bg-pink-800 text-white font-bold py-3 px-6 rounded-full text-lg shadow-md transition">
-            BOOK A DEMO SESSION
-          </button>
+          <Button
+            label=" BOOK A DEMO SESSION"
+            href="/appointments"
+            className=" px-4"
+          />
         </div>
       </div>
     </section>

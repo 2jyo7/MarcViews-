@@ -1,3 +1,4 @@
+import Button from "@/components/common/Button ";
 import Image from "next/image";
 import React from "react";
 
@@ -33,10 +34,12 @@ const PhysicalSecGallery = () => {
       </div>
 
       {/* CTA Button */}
-      <div className="mt-6">
-        <button className="w-full md:w-auto px-8 py-3 text-lg font-semibold text-white bg-pink-600 rounded-lg shadow-md transition-all duration-300 hover:bg-pink-700 focus:ring-2 focus:ring-pink-400 focus:outline-none">
-          BOOK A POC CALL
-        </button>
+      <div className="mt-6 my-6">
+        <Button
+          label=" BOOK A POC CALL"
+          href="/appointments"
+          className="py-3 px-4 "
+        />
       </div>
     </div>
   );
