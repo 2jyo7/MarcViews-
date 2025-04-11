@@ -66,7 +66,10 @@ const CyberStrategy = () => {
   ];
 
   return (
-    <div className="container mx-auto px-6 py-12 bg-gray-100">
+    <div
+      id="cyber-strategic-planning"
+      className="container mx-auto px-6 py-12 bg-gray-100"
+    >
       <h1 className="text-3xl font-bold text-center mb-10 text-gray-800">
         Choose a Strategy
       </h1>
