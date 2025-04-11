@@ -33,4 +33,27 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.                                                        🌐 MarcViews – Elevate Your Digital Strategy
+MarcViews is a visually rich and interactive web platform designed to showcase transformational business outcomes through stunning UI animations and engaging content. Built with modern tech like Next.js, Tailwind CSS, and Framer Motion, MarcViews offers a seamless user experience while communicating critical topics such as:
+
+🔐 Cybersecurity & Risk Management
+☁️ Hybrid Cloud & AI Optimization
+🚀 Digital Reinvention & Application Modernization
+📋 Compliance & Policy Development
+🛡️ Business Continuity Planning
+
+✨ Featuring:
+
+Dynamic pop-up cards
+
+Glowing visual effects for callouts
+
+Responsive and accessible components
+
+Vibrant animated headlines
+
+Modular, DRY-designed sections for easy scalability
+
+MarcViews helps consultancies and tech-forward brands clearly articulate their value, strategies, and solutions—backed by smooth UI/UX that leaves a lasting impression.
+
+
