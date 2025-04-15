@@ -1,4 +1,4 @@
-import ConsultButton from "@/components/common/ConsultButton ";
+import Button from "@/components/common/Button ";
 import { WWSInforType } from "@/types/WWSInfoType ";
 import Image from "next/image";
 import React from "react";
@@ -9,6 +9,7 @@ const WWSInfoSec = () => {
       id: "WWSI01",
       title: "Banking & Financial Service",
       para: "The banking and financial industry faces an ever-evolving threat landscape, including sophisticated cyberattacks, regulatory compliance mandates, and the need to protect sensitive customer data.",
+      href: "/appointments",
       points: [
         "Protect sensitive data",
         "Ensure operational continuity",
@@ -17,12 +18,14 @@ const WWSInfoSec = () => {
       ],
       imgUrl:
         "https://img1.wsimg.com/isteam/ip/9e261d50-bf0d-4aa5-ada1-a6f6f1c7a1f6/Screenshot_5-10-2024_2312_www.canva.com.jpeg/:/cr=t:0%25,l:0%25,w:100%25,h:81.76%25/rs=w:641,h:321,cg:true",
-      btnTitle: "Continue",
+      btnTitle: "Talk to an expert",
     },
     {
       id: "WWSI02",
       title: "Educational Institutions",
       para: "Educational institutions face unique security challenges, including protecting student data, ensuring network integrity, and safeguarding critical infrastructure. ",
+      href: "/contact-us",
+
       points: [
         "Protect student data",
         "Ensure network security",
@@ -34,12 +37,14 @@ const WWSInfoSec = () => {
       ],
       imgUrl:
         "https://img1.wsimg.com/isteam/ip/9e261d50-bf0d-4aa5-ada1-a6f6f1c7a1f6/Screenshot_5-10-2024_23525_www.canva.com.jpeg/:/cr=t:12.87%25,l:0%25,w:100%25,h:74.26%25/rs=w:600,h:300,cg:true/qt=q:92",
-      btnTitle: "Continue",
+      btnTitle: "Talk to Us",
     },
     {
       id: "WWSI03",
       title: "Energy & Water",
       para: "The Energy & Water industry faces growing challenges in sustainability, resource management, and infrastructure security amid rising global demands.",
+      href: "/contact-us",
+
       points: [
         "Power through change with united operations and business solutions",
         "Our centralized OT & SCADA Security services is purposely built to serve utility & energy providers. ",
@@ -52,6 +57,8 @@ const WWSInfoSec = () => {
       id: "WWSI04",
       title: "Healthcare",
       para: "",
+      href: "/contact-us",
+
       points: [
         "Accelerate collaboration across the ecosystem to make healthcare more holistic,  accessible, and efficient",
         " Provide timely and actionable insights to automate processes, optimize resources, and drive  efficiencies",
@@ -65,6 +72,8 @@ const WWSInfoSec = () => {
       id: "WWSI05",
       title: "Non-Profit Institution",
       para: "Nonprofit institutions often face unique security challenges, including limited budgets, reliance on volunteers, and sensitive data protection. We can help in:  ",
+      href: "/contact-us",
+
       points: [
         "Secure remote access",
         "Protect sensitive data",
@@ -79,6 +88,8 @@ const WWSInfoSec = () => {
       id: "WWSI06",
       title: "Transportation & Logistics",
       para: "The transportation and logistics industry faces increasing security risks due to the interconnected nature of supply chains and the reliance on technology. ",
+      href: "/appointments",
+
       points: [
         "Safeguard sensitive data",
         "Protect supply chain integrity",
@@ -93,6 +104,7 @@ const WWSInfoSec = () => {
       id: "WWSI07",
       title: "Hospitality",
       para: "The hospitality industry faces a unique set of security challenges, including sensitive guest data, remote access points, and the need to maintain operational continuity &",
+      href: "/contact-us",
       points: [
         "Protect guest data",
         "Secure remote access",
@@ -107,6 +119,8 @@ const WWSInfoSec = () => {
       id: "WWSI08",
       title: "Retail",
       para: "The retail industry faces a unique set of security challenges, including protecting customer data, securing point-of-sale (POS) systems, and preventing fraud. By partnering with MarcViews Networks, retail organizations can:",
+      href: "/appointments",
+
       points: [
         "Prevent fraud",
         "Ensure compliance",
@@ -121,6 +135,8 @@ const WWSInfoSec = () => {
       id: "WWSI09",
       title: "Government",
       para: "Government agencies face a unique set of security challenges, including protecting sensitive data, ensuring compliance with regulations, and safeguarding critical infrastructure. By partnering with MarcViews Networks, government agencies can:",
+      href: "/appointments",
+
       points: [
         "Ensure compliance",
         "Protect sensitive data",
@@ -135,6 +151,8 @@ const WWSInfoSec = () => {
       id: "WWSI010",
       title: "Professional Services",
       para: "",
+      href: "/contact-us",
+
       points: [
         "Whether you’re a consulting business, accounting firm, law firm, staffing provider, or business services provider, you must be exceeding client expectations every time, everywhere. ",
         "Our managed services will make sure 99.99% of availability of IT infrastructure in secured manner.",
@@ -147,6 +165,8 @@ const WWSInfoSec = () => {
       id: "WWSI011",
       title: "Automotive",
       para: "By partnering with us you can have:",
+      href: "/appointments",
+
       points: [
         "Protect connected vehicles",
         "Safeguard supply chain",
@@ -186,27 +206,19 @@ const WWSInfoSec = () => {
                   <li key={i}>{point}</li>
                 ))}
               </ul>
-              <button className="px-4 py-2 bg-slate-600 text-white rounded-lg hover:bg-lime-700">
-                {item.btnTitle}
-              </button>
+              <Button label={item.btnTitle} href={item.href} />
             </div>
           </div>
         ))}
       </div>
-      <ConsultButton
-        description="          Book a consultation for a proof-of-concept (POC)
-"
-        btnTitle="          REQUEST A CALL
-"
-      />
-      {/* <div className="text-center py-6 bg-white shadow-lg mt-8 rounded-lg mx-4 md:mx-auto max-w-4xl">
-        <p className="text-lg font-semibold text-gray-800 mb-4">
-          Book a consultation for a proof-of-concept (POC)
-        </p>
-        <button className="px-6 py-3 bg-pink-800 text-white font-bold rounded-lg hover:bg-neutral-700 transition-all duration-300">
-          REQUEST A CALL
-        </button>
-      </div> */}
+
+      <div className="flex justify-center items-center mx-auto py-8 gap-8 flex-col bg-teal-100">
+        <span className="title-style text-bg-style">
+          {" "}
+          Book a consultation for a proof-of-concept (POC){" "}
+        </span>
+        <Button label=" REQUEST A CALL" href="/contact-us" />
+      </div>
     </section>
   );
 };

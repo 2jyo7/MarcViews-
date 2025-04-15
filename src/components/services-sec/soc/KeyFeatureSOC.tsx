@@ -47,8 +47,8 @@ const KeyFeatureSOC = () => {
         ))}
       </div>
       <div className="mt-8 flex flex-col md:flex-row gap-4 justify-center">
-        <Button label="Book A Demo" className="w-full md:w-auto" />
-        <Button label="Request A Consultation" className="w-full md:w-auto" />
+        <Button label="Book A Demo" href="/appointments" />
+        <Button label="Request A Consultation" href="/contact-us" />
       </div>
     </section>
   );

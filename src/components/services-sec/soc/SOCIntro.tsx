@@ -1,3 +1,4 @@
+import Button from "@/components/common/Button ";
 import Image from "next/image";
 import React from "react";
 
@@ -26,9 +27,7 @@ const SOCIntro = () => {
             as IBM, Checkpoint, Fortinet, and Microsoft.
           </span>
         </p>
-        <button className="bg-slate-600 hover:bg-pink-700 text-white font-semibold py-2 px-6 rounded-lg transition duration-300">
-          Book A Demo
-        </button>
+        <Button href="/appointments" label="Book A Demo" />
       </div>
     </section>
   );

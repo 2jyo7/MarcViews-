@@ -78,7 +78,9 @@ const ProfessionalServ = () => {
                 ))}
               </ul>
               <div className="mt-4">
-                {ps.btnTitle && <Button label={ps.btnTitle} />}
+                {ps.btnTitle && (
+                  <Button label={ps.btnTitle} href="#services-platform-sec" />
+                )}
               </div>
             </div>
           ))}

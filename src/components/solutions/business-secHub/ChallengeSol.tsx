@@ -38,7 +38,7 @@ const ChallengeSol = () => {
                 ))}
                 <div className='mt-8 text-center'>
                     <p className='text-gray-700 text-lg font-semibold mb-4'>Proof-of-Concept &#40;POC&#41;</p>
-                    <Button label='REQUEST' />
+                    <Button label='REQUEST' href='/contact-us'/>
                 </div>
             </div>
         </section>

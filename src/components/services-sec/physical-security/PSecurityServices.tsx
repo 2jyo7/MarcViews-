@@ -1,3 +1,4 @@
+import Button from "@/components/common/Button ";
 import Image from "next/image";
 import React from "react";
 import { FaVideo, FaKey, FaWifi } from "react-icons/fa";
@@ -86,9 +87,7 @@ const PSecurityServices = () => {
 
         {/* CTA Section */}
         <div className="text-center mt-12">
-          <button className="bg-pink-500 text-white py-3 px-6 rounded-full text-lg font-semibold hover:bg-pink-600 transition">
-            Contact Us
-          </button>
+          <Button label="Contact Us" href="/contact-us" />
         </div>
       </div>
     </div>

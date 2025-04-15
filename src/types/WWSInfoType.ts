@@ -5,4 +5,5 @@ export interface WWSInforType {
   para: string;
   points: string[];
   btnTitle: string;
+  href?: string;
 }

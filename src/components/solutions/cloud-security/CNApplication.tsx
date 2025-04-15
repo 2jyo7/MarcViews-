@@ -35,7 +35,7 @@ const CNApplication = () => {
 
             {/* Button */}
             <div className="mt-6">
-              <Button label="HYBRID CLOUD" />
+              <Button label="HYBRID CLOUD" href="/multiCloud-AI-Era" />
             </div>
           </div>
         </div>
@@ -74,7 +74,7 @@ const CNApplication = () => {
 
             {/* Button */}
             <div className="mt-6">
-              <Button label="Talk to Expert" />
+              <Button label="Talk to Expert" href="/appointments" />
             </div>
           </div>
         </div>
